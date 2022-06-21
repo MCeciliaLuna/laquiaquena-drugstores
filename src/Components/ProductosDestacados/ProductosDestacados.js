@@ -17,7 +17,7 @@ const ProductosDestacados = () => {
 </div>
 
 <div className="card-group">
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=2" className="card-img-top" alt="..." />
     <div className="card-body">
       <h4 className="card-title title-producto">Nombre Producto</h4>
@@ -25,7 +25,7 @@ const ProductosDestacados = () => {
       <h5 className="card-text">Precio</h5>
     </div>
   </div>
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=1" className="card-img-top" alt="..." />
     <div className="card-body">
     <h4 className="card-title title-producto">Nombre Producto</h4>
@@ -33,7 +33,7 @@ const ProductosDestacados = () => {
       <h5 className="card-text">Precio</h5>
     </div>
   </div>
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=3" className="card-img-top" alt="..." />
     <div className="card-body">
     <h4 className="card-title title-producto">Nombre Producto</h4>
@@ -41,7 +41,7 @@ const ProductosDestacados = () => {
       <h5 className="card-text">Precio</h5>
   </div>
 </div>
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=4" className="card-img-top" alt="..." />
     <div className="card-body">
     <h4 className="card-title title-producto">Nombre Producto</h4>
@@ -49,7 +49,7 @@ const ProductosDestacados = () => {
       <h5 className="card-text">Precio</h5>
     </div>
   </div>
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=5" className="card-img-top" alt="..." />
     <div className="card-body">
     <h4 className="card-title title-producto">Nombre Producto</h4>
@@ -57,7 +57,7 @@ const ProductosDestacados = () => {
       <h5 className="card-text">Precio</h5>
     </div>
   </div>
-  <div className="card m-1 border">
+  <div className="card card-producto m-1 border">
     <img src="https://picsum.photos/300?random=6" className="card-img-top" alt="..." />
     <div className="card-body">
     <h4 className="card-title title-producto">Nombre Producto</h4>
