@@ -1,4 +1,6 @@
 import './App.css';
+import BotonWhatsapp from './Components/BotonWhatsapp/BotonWhatsapp';
+import Buscador from './Components/Buscador/Buscador';
 import Carousel from './Components/Carousel/Carousel';
 import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
@@ -9,6 +11,8 @@ import ProductosDestacados from './Components/ProductosDestacados/ProductosDesta
 function App() {
   return (
     <div className="App">
+      <BotonWhatsapp />
+      <Buscador />
       <Navbar />
       <Carousel />
       <LinksRedes />

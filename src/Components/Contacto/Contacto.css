@@ -1,6 +1,6 @@
 @media (min-width: 768px) and (max-width: 991.98px){
-  .area-contacto{
-    display: inline-block !important;
+  .mapa{
+    width: 33vh;
   }
   .area-contacto-email{
     width: 100% !important;
@@ -12,12 +12,14 @@
   .area-contacto{
     display: inline-block !important;
   }
-  .area-contacto-email{
-    width: 100% !important;
-    align-items: center;
-  }
   .mapa{
-    width: 50vh;
+    width: 40vh;
+    padding: 0px !important;
+    margin: 0px !important;
+  }
+  .div-email{
+    width: auto;
+    padding: 10px;
   }
   .input-nombre{
     width: 100% !important;

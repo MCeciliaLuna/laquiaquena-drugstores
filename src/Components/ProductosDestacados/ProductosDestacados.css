@@ -1,3 +1,7 @@
+.card-group{
+  flex-wrap: wrap;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px){
   .title-producto{
     font-size: 2vh;
@@ -13,5 +17,14 @@
   .card-producto{
     width: 45%;
     justify-content: center !important;
+  }
+  .categorias{
+    display: block !important;
+  }
+  .boton-categorias{
+    width: 40vh !important;
+  }
+  .dropdown-categorias{
+    width: 40vh !important;
   }
 }
