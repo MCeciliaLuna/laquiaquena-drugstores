@@ -7,7 +7,7 @@ const ProductosDestacados = () => {
     <div>
       <div className="categorias d-flex justify-content-around align-items-center dropdown pb-0">
       <h4>Productos destacados</h4>
-  <button className="boton-categorias btn btn-secondary dropdown-toggle m-2 w-25" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <button className="boton-categorias btn btn-danger dropdown-toggle m-2 w-25" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Categorías
   </button>
   <ul className="dropdown-categorias dropdown-menu w-25" aria-labelledby="dropdownMenuButton1">
@@ -100,7 +100,7 @@ const ProductosDestacados = () => {
   </a>
 </div>
 <Link to="/productos">
-<button className="btn btn-warning m-4 p-3"><strong>Ver todos los productos</strong></button>
+<button className="btn btn-danger m-4 p-3"><strong>Ver todos los productos</strong></button>
 </Link>
     </div>
   );

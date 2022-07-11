@@ -3,7 +3,7 @@ import './Contacto.css';
 
 const Contacto = () => {
   return (
-    <div className="bg-dark py-4">
+    <div className="bg-danger py-4">
           <h4 className="text-light pb-3">Contacto</h4>
       <div className="area-contacto d-flex">
       <div className="px-4 col-6">
@@ -18,7 +18,7 @@ const Contacto = () => {
       <input type="email" className="w-50 input-email" /> <br />
       <label className="pb-1 text-light fs-5">Mensaje</label> <br />
       <textarea name="mensaje" id="mensaje" cols="30" rows="5" class="cuadro-mensaje p-1 w-75" required></textarea> <br />
-      <input type="button" className="btn btn-warning w-25 mt-2" value="Enviar" />
+      <input type="button" className="btn btn-light w-25 mt-2" value="Enviar" />
     </form>
     </div>
     </div>

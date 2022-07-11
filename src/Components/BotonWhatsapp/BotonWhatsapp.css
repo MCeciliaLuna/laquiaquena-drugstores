@@ -7,7 +7,7 @@
 	z-index: 99;
 }
 .btn-flotante:hover {
-	transform: translateY(-7px);
+	transform: scale(1.1);
 }
 @media (max-width: 767.98px) {
  	.btn-flotante {

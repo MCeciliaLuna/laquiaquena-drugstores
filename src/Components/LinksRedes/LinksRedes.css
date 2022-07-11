@@ -1,0 +1,12 @@
+.link-redes:hover{
+  font-weight: bold;
+  transition-duration: 0.1s;
+}
+
+.link-whatsapp:hover{
+  color: yellowgreen;
+}
+
+.link-instagram:hover{
+  color: mediumorchid;
+}
