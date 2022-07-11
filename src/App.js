@@ -1,24 +1,29 @@
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import BotonWhatsapp from './Components/BotonWhatsapp/BotonWhatsapp';
 import Buscador from './Components/Buscador/Buscador';
-import Carousel from './Components/Carousel/Carousel';
-import Contacto from './Components/Contacto/Contacto';
 import Footer from './Components/Footer/Footer';
-import LinksRedes from './Components/LinksRedes/LinksRedes';
+import Error from './Pages/Error/Error';
+import Productos from './Pages/Productos/Productos';
+import LoginAdministrador from './Pages/LoginAdministrador/LoginAdministrador';
+import Home from './Pages/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
-import ProductosDestacados from './Components/ProductosDestacados/ProductosDestacados';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <BotonWhatsapp />
       <Buscador />
       <Navbar />
-      <Carousel />
-      <LinksRedes />
-      <ProductosDestacados />
-      <Contacto />
-      <Footer />
+       <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='*' element={<Error />} />
+        <Route path='/productos' element={<Productos />} />
+        <Route path='/loginadministrador' element={<LoginAdministrador />} />
+       </Routes>
+       <Footer />
+      </BrowserRouter>
     </div>
   );
 }

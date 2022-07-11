@@ -4,9 +4,9 @@ import imgwhatsapp from '../assets/images/whatsapp-png.png'
 
 const BotonWhatsapp = () => {
   return (
-    <div>
+    <a target="new" href="https://www.whatsapp.com/?lang=es">
       <img src={imgwhatsapp} className="btn-flotante" alt="" />
-    </div>
+    </a>
   );
 };
 

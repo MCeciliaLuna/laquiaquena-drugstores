@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductosDestacados.css';
+import {Link} from 'react-router-dom';
 
 const ProductosDestacados = () => {
   return (
@@ -98,7 +99,9 @@ const ProductosDestacados = () => {
     </div>
   </a>
 </div>
+<Link to="/productos">
 <button className="btn btn-warning m-4 p-3"><strong>Ver todos los productos</strong></button>
+</Link>
     </div>
   );
 };
