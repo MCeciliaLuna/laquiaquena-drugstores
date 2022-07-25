@@ -20,15 +20,36 @@ h1,h2,h3{
 body {
   font-family: Body;
   text-align: center;
-  background-color: #FE0000;
+  background-color: #d30d0e;
 }
 
 input, textarea, .btn{
 box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
 }
 
+.btn{
+  text-shadow: -3px 2px 7px rgba(0,0,0,0.81);
+}
+
+.card-producto{
+  box-shadow: -2px 1px 9px 0px rgba(0,0,0,0.75);
+}
+
+.card-producto:hover{
+  transition: all .2s;
+  transform: scale(1.03);
+  color: black;
+}
+
+
 .btn:hover{
     transition: all .2s;
-    transform: scale(1.10);
+    transform: scale(1.05);
     background-color: #FFDD00 !important;
+}
+
+.dropdown-item:hover{
+  transition: all .2s;
+  background-color: #55a630;
+  color: aliceblue;
 }

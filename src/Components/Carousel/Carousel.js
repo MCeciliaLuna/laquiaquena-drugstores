@@ -5,7 +5,7 @@ import hojas from '../assets/images/logo-carousel.png';
 const Carousel = () => {
   return (
       <div>
-        <div className="logo-carousel d-flex justify-content-center align-items-center">
+        <div className="logo-carousel w-100 d-flex justify-content-center align-items-center">
          <img src={hojas} className="hojas-carousel" alt="" srcset="" />
         </div>
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">

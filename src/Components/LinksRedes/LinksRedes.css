@@ -1,12 +1,11 @@
 .link-redes{
-  background-color: white;
-  color: #55A630;
+  color: white;
+  text-shadow: -4px 3px 8px rgba(0,0,0,0.81);
 }
 
 .link-redes:hover{
   color: white;
-  background-color: #ABCC01;
-  text-shadow: -3px 2px 7px rgba(0,0,0,0.81);
+  background-color: #55A630;
   transition-duration: 0.2s;
 }
 

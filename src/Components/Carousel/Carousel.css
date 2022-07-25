@@ -6,7 +6,7 @@
   position: absolute;
   z-index: 1;
   top: 35%;
-  left: 15vh;
+  left: 0.01vh;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -15,7 +15,6 @@
   }
   .logo-carousel{
    top: 20%;
-   left: 1vh;
   }
   .hojas-carousel{
     width: 80%;
@@ -27,10 +26,9 @@
    height: 34%; 
   }
   .logo-carousel{
-    top: 19%;
-    left: 0.1vh;
+    top: 18vh;
    }
    .hojas-carousel{
-     width: 80%;
+     width: 90%;
    }
 }

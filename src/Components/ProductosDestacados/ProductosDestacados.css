@@ -1,5 +1,20 @@
+.productos-destacados{
+  background-color: whitesmoke;
+  color: #D30D0E;
+}
+
+.boton-categorias{
+  background-color: #55A630;
+  color: white;
+}
+
 .card-group{
   flex-wrap: wrap;
+}
+
+.btn-verproductos{
+  background-color: #55A630;
+  color: aliceblue;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px){
@@ -15,7 +30,7 @@
     justify-content: center !important;
   }
   .card-producto{
-    width: 45%;
+    width: 40%;
     justify-content: center !important;
   }
   .categorias{
