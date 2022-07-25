@@ -1,25 +1,36 @@
 .carousel-height{
-  height: 90vh;
+  height: 95vh;
 }
 
 .logo-carousel{
   position: absolute;
   z-index: 1;
-  top: 30%;
+  top: 35%;
   left: 15vh;
 }
 
 @media (min-width: 768px) and (max-width: 991.98px){
   .carousel-height{
-    height: 50vh;
+    height: 45vh;
   }
   .logo-carousel{
-    width: 100px;
+   top: 20%;
+   left: 1vh;
+  }
+  .hojas-carousel{
+    width: 80%;
   }
 }
 
 @media (max-width: 767.98px) {
   .carousel-height{
-   height: 30vh; 
+   height: 34%; 
   }
+  .logo-carousel{
+    top: 19%;
+    left: 0.1vh;
+   }
+   .hojas-carousel{
+     width: 80%;
+   }
 }

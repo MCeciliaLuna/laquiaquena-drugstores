@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
     <div className="container-fluid pt-1">
-    <Link className="d-flex align-items-center" to="/">
+    <Link className="logo-navbar-hover d-flex align-items-center" to="/">
       <img src={imglogo} alt="logo" className="logo-navbar p-1" />
       <h4 className="navbar-brand text-light fs-3 m-0 ps-1">LA QUIAQUEÑA</h4>
       </Link>

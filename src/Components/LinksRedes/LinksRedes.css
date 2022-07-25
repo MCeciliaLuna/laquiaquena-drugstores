@@ -1,12 +1,11 @@
+.link-redes{
+  background-color: white;
+  color: #55A630;
+}
+
 .link-redes:hover{
-  font-weight: bold;
-  transition-duration: 0.1s;
-}
-
-.link-whatsapp:hover{
-  color: yellowgreen;
-}
-
-.link-instagram:hover{
-  color: mediumorchid;
+  color: white;
+  background-color: #ABCC01;
+  text-shadow: -3px 2px 7px rgba(0,0,0,0.81);
+  transition-duration: 0.2s;
 }
