@@ -1,8 +1,13 @@
 import React from 'react';
 import './Carousel.css';
+import hojas from '../assets/images/logo-carousel.png';
 
 const Carousel = () => {
   return (
+      <div>
+        <div className="logo-carousel d-flex justify-content-center align-items-center">
+         <img src={hojas} className="hojas-carousel" alt="" srcset="" />
+        </div>
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-height carousel-inner">
     <div className="carousel-item active">
@@ -15,14 +20,7 @@ const Carousel = () => {
       <img src="https://images.pexels.com/photos/39828/paper-colorful-color-loose-39828.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." />
     </div>
   </div>
-  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="visually-hidden">Next</span>
-  </button>
+</div>
 </div>
   );
 };
