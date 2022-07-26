@@ -1,3 +1,12 @@
+.title-contacto, label{
+  text-shadow: -5px 4px 9px rgba(0,0,0,0.81);
+}
+
+.btn-enviar-contacto{
+  background-color: #55a630;
+  color: white;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px){
   .mapa{
     width: 33vh;
@@ -5,6 +14,10 @@
   .area-contacto-email{
     width: 100% !important;
     align-items: center;
+  }
+
+  .input-nombre,.input-email{
+    width: 70% !important;
   }
 }
 
@@ -21,13 +34,11 @@
     width: auto;
     padding: 10px;
   }
-  .input-nombre{
+  .input-nombre, .input-email,.cuadro-mensaje{
     width: 100% !important;
   }
-  .input-email{
-    width: 100% !important;
-  }
-  .cuadro-mensaje{
-    width: 100% !important;    
+  .btn-enviar-contacto{
+    padding: 10px;
+    font-size: 3vh;
   }
  }
