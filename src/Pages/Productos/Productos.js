@@ -29,7 +29,7 @@ const Productos = () => {
 </div>
 
 <div className="div-productos-page w-75 d-flex flex-wrap align-items-center justify-content-center mt-5">
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card">
       <img src="https://picsum.photos/400/?random=6" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -39,7 +39,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=7" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -51,7 +51,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto col d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto col d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=8" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -63,7 +63,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=12" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -75,7 +75,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=13" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -87,7 +87,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=14" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -99,7 +99,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=15" className="card-img-top" alt="..." />
       <div className="card-body p-2">
@@ -111,7 +111,7 @@ const Productos = () => {
       </div>
     </div>
   </div>
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
+  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3">
     <div className="card ">
       <img src="https://picsum.photos/400/?random=16" className="card-img-top" alt="..." />
       <div className="card-body p-2">

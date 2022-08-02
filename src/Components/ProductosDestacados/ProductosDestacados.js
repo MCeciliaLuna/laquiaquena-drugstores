@@ -10,7 +10,7 @@ const ProductosDestacados = () => {
 </div>
 
 <div className="card-group d-flex justify-content-evenly">
-  <div className="col-2 card-producto m-3 border-0 rounded-3">
+  <div className="col-2 card-producto m-3">
     <img src="https://picsum.photos/300?random=2" className="card-img-top" alt="..." />
     <div className="card-body">
       <h4 className="card-title title-producto fw-bold">Nombre Producto</h4>
