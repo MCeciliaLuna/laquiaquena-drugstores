@@ -5,7 +5,7 @@
 .logo-carousel{
   position: absolute;
   z-index: 1;
-  top: 35%;
+  top: 27%;
   left: 0.01vh;
 }
 
@@ -14,10 +14,10 @@
     height: 45vh;
   }
   .logo-carousel{
-   top: 20%;
+   top: 15%;
   }
   .hojas-carousel{
-    width: 80%;
+    width: 95% !important;
   }
 }
 
@@ -26,9 +26,9 @@
    height: 34%; 
   }
   .logo-carousel{
-    top: 18vh;
+    top: 15%;
    }
    .hojas-carousel{
-     width: 90%;
+     width: 95% !important;
    }
 }

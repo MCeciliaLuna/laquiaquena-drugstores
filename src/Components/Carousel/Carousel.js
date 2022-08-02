@@ -6,7 +6,7 @@ const Carousel = () => {
   return (
       <div>
         <div className="logo-carousel w-100 d-flex justify-content-center align-items-center">
-         <img src={hojas} className="hojas-carousel" alt="" srcset="" />
+         <img src={hojas} className="hojas-carousel w-75" alt="" srcset="" />
         </div>
     <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
   <div className="carousel-height carousel-inner">
