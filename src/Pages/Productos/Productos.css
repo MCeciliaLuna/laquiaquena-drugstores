@@ -1,0 +1,46 @@
+.productos-page{
+  height: auto;
+}
+
+.card-img{
+  width: 35vh;
+}
+
+.titulo-modal-producto{
+  text-shadow: none;
+  color: #cc0000;
+}
+
+.dropdown{
+  display: none !important;
+}
+
+.list-group-item:hover{
+  transition: all .2s;
+  background-color: #55a630 !important;
+  color: aliceblue;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .card-producto{
+    width: 19%;
+  }
+  }
+  
+  @media (max-width: 767.98px) {
+    .productos-page{
+      display: block !important;
+    }
+    .categorias-productos{
+      display: none !important;
+    }
+    .div-productos-page{
+      width: auto !important;
+    }
+    .card-producto{
+      width: 35% !important;
+    }
+    .dropdown{
+      display: flex !important;
+    }
+  }

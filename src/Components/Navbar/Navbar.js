@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="">
       <form className="d-flex">
           <input className="buscador form-control me-2" type="search" maxLength="35" aria-label="Search" />
-          <button className="btn btn-light" type="submit"><ion-icon name="search-outline"></ion-icon></button>
+          <button className="btn buscar-button" type="submit"><ion-icon name="search-outline"></ion-icon></button>
         </form>
     </div>
         <div className="d-flex justify-content-end">

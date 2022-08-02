@@ -29,6 +29,7 @@ box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
 
 .btn{
   text-shadow: -3px 2px 7px rgba(0,0,0,0.81);
+  background-color: #d30d0e;
 }
 
 .card-producto{
@@ -41,15 +42,9 @@ box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
   color: black;
 }
 
-
 .btn:hover{
     transition: all .2s;
     transform: scale(1.05);
     background-color: #FFDD00 !important;
-}
-
-.dropdown-item:hover{
-  transition: all .2s;
-  background-color: #55a630;
-  color: aliceblue;
+    color: white;
 }
