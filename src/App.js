@@ -4,7 +4,7 @@ import BotonWhatsapp from './Components/BotonWhatsapp/BotonWhatsapp';
 import Footer from './Components/Footer/Footer';
 import Error from './Pages/Error/Error';
 import Productos from './Pages/Productos/Productos';
-import LoginAdministrador from './Pages/LoginAdministrador/LoginAdministrador';
+import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
 
@@ -18,7 +18,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='*' element={<Error />} />
         <Route path='/productos' element={<Productos />} />
-        <Route path='/loginadministrador' element={<LoginAdministrador />} />
+        <Route path='/login' element={<Login />} />
        </Routes>
        <Footer />
       </BrowserRouter>
