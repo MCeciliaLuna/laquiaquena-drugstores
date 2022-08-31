@@ -7,6 +7,7 @@ import Productos from './Pages/Productos/Productos';
 import Login from './Pages/Login/Login';
 import Home from './Pages/Home/Home';
 import Navbar from './Components/Navbar/Navbar';
+import UsuarioLogueado from './Pages/UsuarioLogueado/UsuarioLogueado';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='*' element={<Error />} />
         <Route path='/productos' element={<Productos />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/usuariologueado' element={<UsuarioLogueado />} />
        </Routes>
        <Footer />
       </BrowserRouter>
