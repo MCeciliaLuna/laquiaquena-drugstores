@@ -20,7 +20,10 @@ h1,h2,h3{
 body {
   font-family: Body;
   text-align: center;
-  background-color: #fe0000;
+  background-image: url(../src/assets/images/cover1.png);
+  background-repeat: repeat;
+  background-size: 50vh 50vh;
+  background-position: center;
 }
 
 input, textarea, .btn, .mapa{
