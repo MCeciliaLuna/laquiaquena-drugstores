@@ -18,7 +18,7 @@ const Login = () => {
     
     if (json.token) {
     
-      localStorage.setItem('access-token', json.token)
+    localStorage.setItem('access-token', json.token)
     window.location.href = '/usuariologueado'
     } else {
       alert('El usuario o la contraseña que ingresaste no es correcto')
