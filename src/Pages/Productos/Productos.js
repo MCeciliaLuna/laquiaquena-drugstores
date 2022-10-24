@@ -2,12 +2,15 @@ import React from 'react';
 import './Productos.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Footer from '../../Components/Footer/Footer';
+import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
+import Navbar from '../../Components/Navbar/Navbar';
 
 const Productos = () => {
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {
     try {
-      const info = await axios.get("https://laquiaquenaherboristeriabe.onrender.com/traerproductos");
+      const info = await axios.get("https://laquiaquenadrugstoresbe.onrender.com/traerproductos");
       setProductos(info.data);
     } catch (error) {
       console.log(error);
@@ -19,6 +22,9 @@ const Productos = () => {
 
 
   return (
+    <>
+    <BotonWhatsapp />
+      <Navbar />
     <div className="productos-page d-flex mt-5">
 
 <div className="div-productos-page d-flex flex-wrap align-items-center justify-content-center mt-5">
@@ -39,6 +45,8 @@ const Productos = () => {
   
         </div>
   </div>
+  <Footer />
+  </>
   );
 };
 

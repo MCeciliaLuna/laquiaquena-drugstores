@@ -14,7 +14,7 @@ const UsuarioLogueado = () => {
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {
     try {
-      const info = await axios.get('https://laquiaquenaherboristeriabe.onrender.com/traerproductos');
+      const info = await axios.get('https://laquiaquenadrugstoresbe.onrender.com/traerproductos');
       setProductos(info.data)
     } catch (error) {
       console.log(error)
@@ -45,7 +45,7 @@ const UsuarioLogueado = () => {
 
   }
   return (
-    <div className="page-usuariologueado pt-5 mt-5">
+    <div className="page-usuariologueado pt-5">
       <div className="w-100">
       <h2 className="title-logueado text-center pt-3 d-block text-light">¡Bienvenidos/as!</h2>
       <div className="d-block text-center w-100 mb-3">

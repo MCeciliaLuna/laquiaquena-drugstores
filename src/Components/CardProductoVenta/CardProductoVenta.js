@@ -5,7 +5,7 @@ import '../CardProductoVenta/CardProductoVenta.css'
 const CardProductoVenta = ({productos = []}) => {
 
     const eliminarProducto = async (_id) => {
-      await axios.delete(`https://laquiaquenaherboristeriabe.onrender.com/eliminarproducto/${_id}`)
+      await axios.delete(`https://laquiaquenadrugstoresbe.onrender.com/eliminarproducto/${_id}`)
       alert('Producto eliminado exitosamente')
       window.location.replace('/usuariologueado')
     }

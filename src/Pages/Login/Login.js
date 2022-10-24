@@ -7,7 +7,7 @@ const Login = () => {
   const { register, handleSubmit } = useForm();
 
   const handleLogin = async (data) => {
-    const resp = await fetch('https://laquiaquenaherboristeriabe.onrender.com/login', {
+    const resp = await fetch('https://laquiaquenadrugstoresbe.onrender.com/login', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -26,10 +26,10 @@ const Login = () => {
   }
 
   return (
-    <div className="login-page text-center position-relative mt-5">
+    <div className="login-page text-center position-relative">
       <div className="position-absolute top-50 start-50 translate-middle">
       <h2 className="text-login fs-1 pt-0 pb-2 d-block text-light">Ingresá</h2>
-      <form className="mt-0 mx-5" onSubmit={handleSubmit(handleLogin)}>
+      <form className="mt-0 mx-1" onSubmit={handleSubmit(handleLogin)}>
   <div className="mb-3">
     <label for="exampleInputEmail1" className="text-login fs-4 form-label w-100 text-light">Nombre de usuario</label>
     <input type="text" className="input-logueo w-100 m-2 text-center rounded-3 border-0 p-2" placeholder="LaQuiaqueñaHerboristeria" {...register("nombre", { require: true })} required/>

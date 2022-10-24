@@ -7,7 +7,7 @@ const ProductosDestacados = () => {
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {
     try {
-      const info = await axios.get("https://laquiaquenaherboristeriabe.onrender.com/traerproductos");
+      const info = await axios.get("https://laquiaquenadrugstoresbe.onrender.com/traerproductos");
       setProductos(info.data);
     } catch (error) {
       console.log(error);
