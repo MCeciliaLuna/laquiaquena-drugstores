@@ -7,6 +7,7 @@ import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
 import Navbar from '../../Components/Navbar/Navbar';
 
 const Productos = () => {
+  localStorage.removeItem('access-token');
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {
     try {

@@ -44,14 +44,6 @@ const CardProductoVenta = ({productos = []}) => {
                 {/* <h5 className="card-text py-2 m-0"> ${item.precio}</h5> */}
                 
                   <div className="d-block">
-                  {/* <button
-                    type="button"
-                    className="boton-logueado-editar btn text-light m-1"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal1"
-                  >
-                    Editar
-                  </button> */}
                   <button
                     type="button"
                     id="botonEliminar"

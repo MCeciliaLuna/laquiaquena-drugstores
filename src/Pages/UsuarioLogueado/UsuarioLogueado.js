@@ -9,7 +9,6 @@ const UsuarioLogueado = () => {
   if (!token) {
     window.location.href = '/'
   }
-
   
   const [productos, setProductos] = useState([]);
   const getProductos = async () => {

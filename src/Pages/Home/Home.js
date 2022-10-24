@@ -8,6 +8,7 @@ import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
 import Footer from '../../Components/Footer/Footer'
 
 const Home = () => {
+  localStorage.removeItem('access-token');
   return (
     <div>
       <BotonWhatsapp />

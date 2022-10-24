@@ -4,7 +4,6 @@ import { useForm } from "react-hook-form";
 
 const Login = () => {
   localStorage.removeItem('access-token');
-  
   const { register, handleSubmit } = useForm();
 
   const handleLogin = async (data) => {
