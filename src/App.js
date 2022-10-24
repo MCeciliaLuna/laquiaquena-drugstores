@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error from './Pages/Error/Error';
 import Productos from './Pages/Productos/Productos';
 import Login from './Pages/Login/Login';
@@ -8,7 +8,6 @@ import UsuarioLogueado from './Pages/UsuarioLogueado/UsuarioLogueado';
 
 function App() {
   return (
-    <div className="App">
       <BrowserRouter>
        <Routes>
         <Route path='/' element={<Home />} />
@@ -18,7 +17,6 @@ function App() {
         <Route path='/usuariologueado' element={<UsuarioLogueado />} />
        </Routes>
       </BrowserRouter>
-    </div>
   );
 }
 
