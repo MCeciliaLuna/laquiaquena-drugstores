@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.675159b2.css",
+    "main.js": "/static/js/main.ceed75a9.js",
+    "static/js/787.8ff806f7.chunk.js": "/static/js/787.8ff806f7.chunk.js",
+    "static/media/Signika-VariableFont_wght.ttf": "/static/media/Signika-VariableFont_wght.de83163a1ebe3e53dd9c.ttf",
+    "static/media/whatsapp-png.png": "/static/media/whatsapp-png.d1038eb1bce26b4dab85.png",
+    "static/media/hoja.png": "/static/media/hoja.4c6463a4b927c796def2.png",
+    "static/media/cover1.png": "/static/media/cover1.4d15f812449078ca56bf.png",
+    "static/media/cover2.png": "/static/media/cover2.621ee5c90e29d1598260.png",
+    "static/media/cover3.png": "/static/media/cover3.8156392ed3e3fcb5a54e.png",
+    "static/media/Fenway Park JF Regular.ttf": "/static/media/Fenway Park JF Regular.4a8eea34aba6285bb6eb.ttf",
+    "static/media/logo-carousel.png": "/static/media/logo-carousel.1f5941a4f5f9cb4669d3.png",
+    "static/media/GillKayoCondensedPlain.otf": "/static/media/GillKayoCondensedPlain.77ba3089afd7611e95de.otf",
+    "index.html": "/index.html",
+    "main.675159b2.css.map": "/static/css/main.675159b2.css.map",
+    "main.ceed75a9.js.map": "/static/js/main.ceed75a9.js.map",
+    "787.8ff806f7.chunk.js.map": "/static/js/787.8ff806f7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.675159b2.css",
+    "static/js/main.ceed75a9.js"
+  ]
+}
