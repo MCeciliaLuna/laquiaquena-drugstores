@@ -19,7 +19,7 @@ const Login = () => {
     
     if (json.token) {
     localStorage.setItem('access-token', json.token)
-      window.location.href = "https://www.laquiaquenadrugstore.netlify.app/usuariologueado"
+      window.location.href = '/usuariologueado'
     } else {
       alert('El usuario o la contraseña que ingresaste no es correcto')
     }
