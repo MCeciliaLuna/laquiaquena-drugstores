@@ -17,7 +17,7 @@ const Login = () => {
     })
     const json = await resp.json();
     
-    if (json.token) {
+    if (json.token){
     localStorage.setItem('access-token', json.token)
       window.location.href = '/usuariologueado'
     } else {
