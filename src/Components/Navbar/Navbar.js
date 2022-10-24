@@ -19,7 +19,7 @@ const Navbar = () => {
     </div> */}
         <div className="d-flex justify-content-end">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <Link to="/productos" className="nav-link text-light fs-4" aria-current="page" href="/#">Productos</Link>
+            <Link to="/productos" className="nav-link text-light fs-4" aria-current="page">Productos</Link>
         </ul>
         </div>
       </div>

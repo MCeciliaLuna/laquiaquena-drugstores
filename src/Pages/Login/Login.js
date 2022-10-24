@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 
 const Login = () => {
   localStorage.removeItem('access-token');
+  
   const { register, handleSubmit } = useForm();
 
   const handleLogin = async (data) => {
@@ -17,9 +18,8 @@ const Login = () => {
     const json = await resp.json();
     
     if (json.token) {
-    
     localStorage.setItem('access-token', json.token)
-    window.location.href = '/usuariologueado'
+      window.location.href = "https://www.laquiaquenadrugstore.netlify.app/usuariologueado"
     } else {
       alert('El usuario o la contraseña que ingresaste no es correcto')
     }
