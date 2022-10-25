@@ -26,23 +26,28 @@ const UsuarioLogueado = () => {
 
   const { register, handleSubmit} = useForm()
   const onSubmit = async (data) => {
+    const formData = new FormData()
+  
+    for(const name in data) {
+      if (name === 'image') {
+        formData.append(name, data[name][0])
+      } else {
+        formData.append(name, data[name])
+      }
+    }
 
-    console.log(data)
-    // const resp = await fetch('http://localhost:8000/crearproducto',
-    // {
-    // method: 'POST',
-    // body: JSON.stringify(data),
-    // headers: {
-    //   "Content-Type": "multipart/form-data"
-    // }
-    // }
-    // )
-    // const json = await resp.json();
-    //    console.log(json)
+    const resp = await fetch('https://laquiaquenadrugstoresbe.onrender.com/crearproducto',
+    {
+    method: 'POST',
+    body: formData
+    }
+    )
+    const json = await resp.json();
+       console.log(json)
     
-       //window.location.href = '/usuariologueado'
-
+      window.location.href = '/usuariologueado'
   }
+
   return (
     <div className="page-usuariologueado pt-5">
       <div className="w-100">
@@ -107,6 +112,7 @@ const UsuarioLogueado = () => {
                     className="form-control input-nombreproducto"
                     maxLength="35"
                     placeholder="ingresá tipo + nombre + marca"
+                    name="nombre"
                     {...register("nombre")} require
                   />
                 </div>
@@ -121,6 +127,7 @@ const UsuarioLogueado = () => {
                     maxLength="50"
                     placeholder="describí brevemente las propiedades"
                     {...register("descripcion")} require
+                    name="descripcion"
                   />
                 </div>
                 <div className="mb-3">
@@ -133,6 +140,7 @@ const UsuarioLogueado = () => {
                       type="number"
                       id="disabledTextInput"
                       className="form-control w-50"
+                      name="precio"
                       {...register("precio")} require
                     />
                   </div>
@@ -142,6 +150,7 @@ const UsuarioLogueado = () => {
                   <input
                     type="file"
                     className="btn p-1 d-block rounded-3 w-100"
+                    name="image"
                     {...register("image")} require
                    />
                 </div>
