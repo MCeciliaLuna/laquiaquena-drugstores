@@ -7,7 +7,7 @@ const CardProductoVenta = ({productos = []}) => {
     const eliminarProducto = async (_id) => {
       await axios.delete(`https://laquiaquenadrugstoresbe.onrender.com/eliminarproducto/${_id}`)
       alert('Producto eliminado exitosamente')
-      window.location.replace('/usuariologueado')
+      window.location.href = '/usuariologueado'
     }
 
     const aux = productos.sort((a,b) =>{
@@ -39,10 +39,9 @@ const CardProductoVenta = ({productos = []}) => {
                 alt="nombre"
               />
               <div className="card-body p-2">
-                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title mt-3 pt-1 mb-0">{item.nombre}</h4>
-                <p className="cardventa-descripcion d-flex justify-content-center align-items-center card-text m-0 p-1">{item.descripcion}</p>
-                {/* <h5 className="card-text py-2 m-0"> ${item.precio}</h5> */}
-                
+                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title">{item.nombre}</h4>
+                <p className="cardventa-descripcion d-flex justify-content-center align-items-center card-text">{item.categoria}</p>
+                <h5>${item.precio}</h5>
                   <div className="d-block">
                   <button
                     type="button"

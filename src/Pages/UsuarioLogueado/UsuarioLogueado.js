@@ -43,8 +43,7 @@ const UsuarioLogueado = () => {
     }
     )
     const json = await resp.json();
-       console.log(json)
-    
+      alert('Producto creado exitosamente')
       window.location.href = '/usuariologueado'
   }
 
@@ -110,24 +109,22 @@ const UsuarioLogueado = () => {
                     type="text"
                     id="disabledTextInput"
                     className="form-control input-nombreproducto"
-                    maxLength="35"
-                    placeholder="ingresá tipo + nombre + marca"
-                    name="nombre"
-                    {...register("nombre")} require
+                    maxLength="40"
+                    placeholder="ingresá tipo + marca"
+                    {...register("nombre", { required: true })} required
                   />
                 </div>
                 <div className="mb-3">
                   <label for="disabledTextInput" className="fs-5 form-label text-light">
-                    Descripción
+                    Categoria
                   </label>
                   <input
                     type="text"
                     id="disabledTextInput"
                     className="form-control"
                     maxLength="50"
-                    placeholder="describí brevemente las propiedades"
-                    {...register("descripcion")} require
-                    name="descripcion"
+                    placeholder="seleccioná una categoría"
+                    {...register("categoria", { required: true })} required
                   />
                 </div>
                 <div className="mb-3">
@@ -140,8 +137,7 @@ const UsuarioLogueado = () => {
                       type="number"
                       id="disabledTextInput"
                       className="form-control w-50"
-                      name="precio"
-                      {...register("precio")} require
+                      {...register("precio")} required
                     />
                   </div>
                 </div>
@@ -150,8 +146,7 @@ const UsuarioLogueado = () => {
                   <input
                     type="file"
                     className="btn p-1 d-block rounded-3 w-100"
-                    name="image"
-                    {...register("image")} require
+                    {...register("image", { required: true })} required
                    />
                 </div>
                 <div className="modal-footer">
