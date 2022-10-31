@@ -1,5 +1,8 @@
 .carousel-height{
   height: 95vh;
+  background-image: url(../assets/images/WhatsApp\ Image\ 2022-10-31\ at\ 13.48.07.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .logo-carousel{
@@ -11,22 +14,22 @@
 
 @media (min-width: 768px) and (max-width: 991.98px){
   .carousel-height{
-    height: 45vh;
+    height: 75vh;
   }
   .logo-carousel{
-   top: 15%;
+   top: 29%;
   }
   .hojas-carousel{
-    width: 95% !important;
+    width: 85% !important;
   }
 }
 
 @media (max-width: 767.98px) {
   .carousel-height{
-   height: 34%; 
+   height: 75vh;
   }
   .logo-carousel{
-    top: 15%;
+    top: 30%;
    }
    .hojas-carousel{
      width: 95% !important;

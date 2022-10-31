@@ -22,14 +22,19 @@
 }
 
 @media (min-width: 768px) and (max-width: 991.98px){
+  .productos-page{
+    height: 90vh;
+  }
   .card-producto{
-    width: 19%;
+    width: 20% !important;
+    height: 35%;
   }
   }
   
   @media (max-width: 767.98px) {
     .productos-page{
       display: block !important;
+      padding-top: 5% !important;
     }
     .categorias-productos{
       display: none !important;
