@@ -39,9 +39,9 @@ const CardProductoVenta = ({productos = []}) => {
                 alt="nombre"
               />
               <div className="card-body p-2">
-                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title">{item.nombre}</h4>
+                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title fw-bold">{item.nombre}</h4>
                 <p className="cardventa-descripcion d-flex justify-content-center align-items-center card-text">{item.categoria}</p>
-                <h5>${item.precio}</h5>
+                <h5 className="fw-bold">${item.precio}</h5>
                   <div className="d-block">
                   <button
                     type="button"

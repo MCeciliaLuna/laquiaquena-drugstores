@@ -33,8 +33,8 @@ const ProductosDestacados = () => {
   <div className="col-2 card-producto m-3" key={producto._id}>
     <img src={producto.image.secure_url} className="card-img-top" alt={producto.nombre} />
     <div className="card-body">
-      <h4 className="card-title title-producto fw-bold">{producto.nombre}</h4>
-      <p className="card-text py-2 m-0">{producto.categoria}</p>
+      <h4 className="card-title title-producto fw-bold d-flex justify-content-center align-items-center">{producto.nombre}</h4>
+      <p className="card-text py-2 m-0 ">{producto.categoria}</p>
       <h5 className="card-text">${producto.precio}</h5>
       <a href={`https://api.whatsapp.com/send?phone=5493812183467&text=%C2%A1Hola%20*La%20Quiaque%C3%B1a%20Herborister%C3%ADa*%20%F0%9F%91%8B%F0%9F%8C%BF%20!%20Visit%C3%A9%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20del%20producto%20*${producto.nombre}*.%20Muchas%20gracias!%20%E2%98%BA`} target="new" >
       <button type="button" className="boton-productos-destacados btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Comprar</button></a>
