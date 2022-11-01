@@ -15,16 +15,6 @@
   color: #cc0000;
 }
 
-.dropdown{
-  display: none !important;
-}
-
-.list-group-item:hover{
-  transition: all .2s;
-  background-color: #55a630 !important;
-  color: aliceblue;
-}
-
 @media (min-width: 768px) and (max-width: 991.98px){
   .productos-page{
     height: 90vh;

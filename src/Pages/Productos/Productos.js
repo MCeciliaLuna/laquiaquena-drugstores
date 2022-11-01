@@ -26,9 +26,18 @@ const Productos = () => {
     <>
     <BotonWhatsapp />
       <Navbar />
-    <div className="productos-page d-flex mt-5">
-
-<div className="div-productos-page d-flex flex-wrap justify-content-center mt-5">
+    <div className="productos-page mt-5">
+                  <select
+                    className="form-select w-75 mt-5"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option value="Categoría 1">Categoría 1</option>
+                    <option value="Categoría 2">Categoría 2</option>
+                    <option value="Categoría 3">Categoría 3</option>
+                    <option value="Categoría 4">Categoría 4</option>
+                  </select>
+<div className="div-productos-page d-flex flex-wrap justify-content-center">
 { 
    productos.map(producto => (
   <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3" key={producto._id}>

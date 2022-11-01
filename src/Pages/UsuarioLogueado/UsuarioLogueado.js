@@ -130,10 +130,10 @@ const UsuarioLogueado = () => {
                     {...register("categoria", { required: true })}
                     required
                   >
-                    <option selected>Categoría 1</option>
-                    <option value="1">Categoría 2</option>
-                    <option value="2">Categoría 3</option>
-                    <option value="3">Categoría 4</option>
+                    <option value="Categoría 1">Categoría 1</option>
+                    <option value="Categoría 2">Categoría 2</option>
+                    <option value="Categoría 3">Categoría 3</option>
+                    <option value="Categoría 4">Categoría 4</option>
                   </select>
                 </div>
                 <div className="mb-3">
