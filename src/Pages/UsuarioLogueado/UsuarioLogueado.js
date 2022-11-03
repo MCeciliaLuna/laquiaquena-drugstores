@@ -70,13 +70,25 @@ const UsuarioLogueado = () => {
       <div className="d-flex justify-content-center">
         <button
           type="button"
-          className="text-center btn text-light p-3 mb-4"
+          className="botonagregarproducto text-center btn text-light p-3 mb-4"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
           AGREGAR NUEVO PRODUCTO
         </button>
       </div>
+      <div className="productos-page py-1 d-flex justify-content-center">
+                  <select
+                    className="form-select w-75 mt-0"
+                    aria-label="Default select example"
+                    required
+                  >
+                    <option value="Categoría 1">Categoría 1</option>
+                    <option value="Categoría 2">Categoría 2</option>
+                    <option value="Categoría 3">Categoría 3</option>
+                    <option value="Categoría 4">Categoría 4</option>
+                  </select>
+                  </div>
       <div className="d-flex">
         <div className="div-productos-page">
           <CardProductoVenta productos={productos} />
@@ -158,13 +170,13 @@ const UsuarioLogueado = () => {
                   <label className="fs-5 mb-1 text-light">Subir foto</label>
                   <input
                     type="file"
-                    className="btn p-1 d-block rounded-3 w-100"
+                    className="btn p-1 d-block rounded-3 w-100 text-light"
                     {...register("image", { required: true })}
                     required
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn text-light">
+                  <button type="submit" className="botoncrearproducto btn text-light">
                     Crear producto
                   </button>
                 </div>

@@ -1,8 +1,5 @@
 .page-usuariologueado{
   height: auto;
-  background-image: url(/src/assets/images/cover2.png);
-  background-repeat: repeat;
-  background-size: 40vh 40vh;
 }
 
 .fondo-modal-logueado{
@@ -19,28 +16,16 @@
   text-shadow: 2px 3px 9px #000000; 
 }
 
-.botonsalirsesion{
-  background-color: #d30d0e !important; 
+.botonagregarproducto{
+  background-color: #f89d13 !important;
 }
 
-.botonsalirsesion:hover{
-  background-color: #55a630 !important; 
-}
-
-.boton-logueado-editar{
-  background-color: #f89d13;
-}
-
-.boton-logueado-editar:hover{
-  background-color: #7fab1f;
+.botoncrearproducto{
+background-color: #7fab1f;
 }
 
 .boton-logueado-eliminar{
   background-color: #b00215;
-}
-
-.boton-logueado-eliminar:hover{
-  background-color: #7fab1f;
 }
 
 .input-nombreproducto{

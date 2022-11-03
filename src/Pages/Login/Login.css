@@ -1,9 +1,5 @@
 .login-page{
   height: 100vh;
-  background-image: url(../assets/images/cover3.png);
-  background-size: 50vh 50vh;
-  background-position: center;
-  background-repeat: repeat;
 }
 
 .text-login{

@@ -23,10 +23,10 @@ const Productos = () => {
 
 
   return (
-    <>
+    <div className="mt-4 pt-4">
     <BotonWhatsapp />
       <Navbar />
-    <div className="productos-page mt-5">
+    <div className="productos-page py-1 d-flex justify-content-center">
                   <select
                     className="form-select w-75 mt-5"
                     aria-label="Default select example"
@@ -37,6 +37,7 @@ const Productos = () => {
                     <option value="Categoría 3">Categoría 3</option>
                     <option value="Categoría 4">Categoría 4</option>
                   </select>
+                  </div>
 <div className="div-productos-page d-flex flex-wrap justify-content-center">
 { 
    productos.map(producto => (
@@ -55,9 +56,9 @@ const Productos = () => {
    ))}
   
         </div>
-  </div>
+  {/* </div> */}
   <Footer />
-  </>
+  </div>
   );
 };
 
