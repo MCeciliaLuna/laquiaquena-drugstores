@@ -8,10 +8,10 @@ const SelectCategorias = () => {
                     aria-label="Default select example"
                     required
                   >
-                    <option value="Categoría 1">Categoría 1</option>
-                    <option value="Categoría 2">Categoría 2</option>
-                    <option value="Categoría 3">Categoría 3</option>
-                    <option value="Categoría 4">Categoría 4</option>
+                    <option value="Aceite, aderezos y vinagre">Categoría 1</option>
+                    <option value="Endulzantes">Categoría 2</option>
+                    <option value="Salsas">Categoría 3</option>
+
                   </select>
                   </div>
   );
