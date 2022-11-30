@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import '../CardProductoVenta/CardProductoVenta.css'
+import ModalEditar from "../ModalEditar/ModalEditar";
 
 const CardProductoVenta = ({productos = []}) => {
 
@@ -30,7 +31,7 @@ const CardProductoVenta = ({productos = []}) => {
   return (
     <div className="d-flex flex-wrap align-items-center justify-content-center">
             {
-              productosOrdenados.map((item, index)=>
+              productosOrdenados.map((item)=>
               <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
               <div className="card text-center">
               <img
@@ -47,8 +48,6 @@ const CardProductoVenta = ({productos = []}) => {
                     type="button"
                     id="botonEliminar"
                     className="btn boton-logueado-eliminar text-light mx-1"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2"
                     onClick={(_id) => eliminarProducto(item._id)}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -59,9 +58,9 @@ const CardProductoVenta = ({productos = []}) => {
                 </div>
               </div>
             </div>
-            
-              )
-            }
+            )
+          }
+          <ModalEditar/>
 
           </div>
   );
