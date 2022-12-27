@@ -4,21 +4,21 @@ import Contacto from '../../Components/Contacto/Contacto';
 import LinksRedes from '../../Components/LinksRedes/LinksRedes';
 import ProductosDestacados from '../../Components/ProductosDestacados/ProductosDestacados';
 import Navbar from '../../Components/Navbar/Navbar';
-import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
 import Footer from '../../Components/Footer/Footer'
+import ButtonPedidos from '../../Components/ButtonPedidos/ButtonPedidos';
 
 const Home = () => {
   localStorage.removeItem('access-token');
   return (
-    <div>
-      <BotonWhatsapp />
+    <>
+    <ButtonPedidos />
       <Navbar />
       <Carousel />
       <LinksRedes />
       <ProductosDestacados />
       <Contacto />
       <Footer />
-    </div>
+    </>
   );
 };
 
