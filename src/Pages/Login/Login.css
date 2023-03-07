@@ -1,0 +1,76 @@
+.height-login{
+  height: 100vh;
+}
+
+.bg-modal{
+  background-color: #b00215;
+}
+
+.button-registro{
+  background-color: #f89d13;
+}
+
+.btn-volver-modal{
+  background-color: #b00215 !important;
+}
+
+.btn-crear-modal{
+  background-color: #f89d13 !important;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .height-login{
+    height: 95vh;
+  }
+  .input-login{
+    padding: 10px;
+    font-size: 2vh;
+  }
+  .text-title{
+    font-size: 2.5vh;
+  }
+  .text-title-principal{
+    font-size: 4vh;
+  }
+  .boton-login{
+    font-size: 2vh;
+  }
+  .input-registro{
+    padding: 10px;
+    font-size: 2vh;
+  }
+  .boton-modal-registro{
+    padding: 10px;
+    font-size: 2vh;
+  }
+  }
+  
+  
+  @media (max-width: 767.98px) {
+    .height-login{
+      height: 95vh;
+    }
+    .input-login{
+      width: 88% !important;
+      padding: 10px;
+      font-size: 3vh;
+    }
+    .text-title{
+      font-size: 3vh;
+    }
+    .text-title-principal{
+      font-size: 5vh;
+    }
+    .boton-login{
+      font-size: 3vh;
+      padding: 10px !important;
+    }
+    .input-registro{
+      padding: 10px;
+      font-size: 2.5vh;
+    }
+    .boton-modal-registro{
+      padding: 10px;
+      font-size: 2.5vh;
+    }
+  }

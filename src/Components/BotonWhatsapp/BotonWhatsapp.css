@@ -1,5 +1,5 @@
 .btn-flotante {
-  width: 80px;
+  width: 100px;
 	position: fixed;
 	bottom: 40px;
 	right: 40px;
@@ -7,14 +7,14 @@
 	z-index: 99;
 }
 .btn-flotante:hover {
-	transform: scale(1.1);
+	transform: translateY(-7px);
 }
 @media (max-width: 767.98px) {
  	.btn-flotante {
-		width: 115px;
+		width: 30%;
 		font-size: 14px;
 		padding: 12px 20px;
-		bottom: 20px;
-		right: 1px;
+		bottom: 15px;
+		right: 3px;
 	}
 } 

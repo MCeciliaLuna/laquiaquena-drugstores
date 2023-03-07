@@ -1,24 +1,34 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Error from './Pages/Error/Error';
-import Productos from './Pages/Productos/Productos';
-import LoginPage from './Pages/LoginPage/LoginPage';
+import Login from './Pages/Login/Login';
+import MiPedido from './Pages/MiPedido/MiPedido';
+import UserProductos from './Pages/UserProductos/UserProductos';
 import Home from './Pages/Home/Home';
-import UsuarioLogueado from './Pages/UsuarioLogueado/UsuarioLogueado';
-import LoginInicial from './Pages/LoginInicial/LoginInicial';
-import PedidoPage from './Pages/PedidoPage/PedidoPage';
+import AdminPedidos from './Pages/AdminPedidos/AdminPedidos'
+import AdminProductos from './Pages/AdminProductos/AdminProductos'
+import Usuarios from './Pages/Usuarios/Usuarios';
+import Administrador from './Pages/Administrador/Administrador';
 
 function App() {
+  const [pedido, setPedido] = useState([])
   return (
       <BrowserRouter>
        <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path="/" element= {<LoginInicial />} />
+       <Route path="/" element={<Login />} />
+
+       <Route path="/home" element={<Home />} />
+        <Route path="/productos" element={<UserProductos setPedido={setPedido} pedido={pedido} />} />
+
+        <Route path="/mipedido" element={<MiPedido setPedido={setPedido} pedido={pedido} />} />
+
+        <Route path="/administrador" element={<Administrador />} />
+        <Route path="/administrador/pedidos" element={<AdminPedidos />} />
+        <Route path="/administrador/productos" element={<AdminProductos />} />
+        <Route path="/administrador/usuarios" element={<Usuarios />} />
+
         <Route path='*' element={<Error />} />
-        <Route path='/productos' element={<Productos />} />
-        <Route path='/mipedido' element={<PedidoPage/>} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/usuariologueado' element={<UsuarioLogueado />} />
        </Routes>
       </BrowserRouter>
   );

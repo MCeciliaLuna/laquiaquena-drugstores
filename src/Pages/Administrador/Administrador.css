@@ -1,0 +1,72 @@
+.page-administrador {
+  height: 100vh;
+}
+
+.fondo-modal-logueado {
+  background-color: #f89d13;
+}
+
+.text-light {
+  text-shadow: 2px 3px 9px #000000;
+}
+
+.buttons-movile {
+  width: 700px;
+  font-size: 5vh;
+}
+
+.title-logueado {
+  text-shadow: 2px 3px 9px #000000;
+}
+
+.botonsalirsesion {
+  background-color: #b00215 !important;
+}
+
+.botonsalirsesion:hover {
+  background-color: #f89d13 !important;
+}
+
+.boton-logueado-editar {
+  background-color: #f89d13;
+}
+
+.boton-logueado-editar:hover {
+  background-color: #7fab1f;
+}
+
+.boton-logueado-eliminar {
+  background-color: #b00215;
+}
+
+.boton-logueado-eliminar:hover {
+  background-color: #7fab1f;
+}
+
+.input-nombreproducto {
+  text-transform: uppercase;
+}
+
+::placeholder {
+  text-transform: lowercase;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .buttons-movile {
+    width: 700px;
+    font-size: 3.5vh;
+  }
+  .page-administrador {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .buttons-movile {
+    width: 300px;
+    font-size: 3.5vh;
+  }
+  .page-administrador {
+    height: 90vh;
+  }
+}

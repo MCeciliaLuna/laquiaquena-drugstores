@@ -1,0 +1,37 @@
+.pedidos-height {
+  height: auto;
+}
+
+.text-pedido {
+  color: #f89d13;
+}
+
+.title-pedido {
+  color: #b00215;
+}
+
+.whatsapp-pedido,
+.text-entrega {
+  color: #7fab1f;
+}
+
+.whatsapp-pedido:hover {
+  transition: all 0.2s;
+  transform: scale(1.05);
+}
+
+.card-pedido-admin {
+  width: 30%;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card-pedido-admin {
+    width: 40%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .card-pedido-admin {
+    width: 75%;
+  }
+}

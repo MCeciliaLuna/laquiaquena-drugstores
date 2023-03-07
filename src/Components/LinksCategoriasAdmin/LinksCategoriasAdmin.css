@@ -1,0 +1,29 @@
+.links-admin-categoria{
+  background-color: #b00215;
+}
+
+.link-admin-categoria{
+  width: 20%;
+  font-size: 3vh;
+}
+
+.link-admin-categoria:hover{
+  transition: all .2s;
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .link-admin-categoria{
+    width: 40%;
+    font-size: 3vh;
+    text-align: center;
+  }
+  }
+
+  @media (max-width: 767.98px) {
+    .link-admin-categoria{
+      width: 40%;
+      font-size: 2.5vh;
+      text-align: center;
+    }
+  }

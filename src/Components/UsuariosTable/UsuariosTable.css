@@ -1,0 +1,11 @@
+@media (max-width: 767.98px) {
+  .card-usuarios{
+    width: 65%;
+  }  
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+  .card-usuarios{
+    width: 40%;
+  }  
+  }

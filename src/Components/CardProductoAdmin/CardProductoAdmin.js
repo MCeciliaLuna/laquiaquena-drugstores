@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import '../CardProductoVenta/CardProductoVenta.css'
+import './CardProductoAdmin.css'
 import ModalEditar from "../ModalEditar/ModalEditar";
 
 const CardProductoVenta = ({productos = []}) => {
