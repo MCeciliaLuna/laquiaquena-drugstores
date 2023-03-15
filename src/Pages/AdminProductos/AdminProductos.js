@@ -9,17 +9,21 @@ import './AdminProductos.css'
 import ButtonAdminVolverProductos from '../../Components/ButtonAdminVolverProductos/ButtonAdminVolverProductos';
 
 const AdminProductos = () => {
-  const localStorageRole = localStorage.getItem("role");
-  if (localStorageRole === "USER" || !localStorage.getItem("role") || !localStorage.getItem("access-token")) {
+  const [productos, setProductos] = useState([]);
+  const [productosOrdenados, setProductosOrdenados] = useState([])
+  const [productosFiltrados, setProductosFiltrados] = useState([])
+  const [selectedCategory, setSelectedCategory] = useState('Todos');
+
+  
+  if (!localStorage.getItem("role") || !localStorage.getItem("access-token")) {
     alert("No tenés autorización para ingresar a esta página");
     window.location.href = "/";
   }
-  
-  const [productos, setProductos] = useState([]);
+
   
   const getProductos = async () => {
     try {
-      const info = await axios.get('https://laquiaquenaherboristeriabe.onrender.com/traerproductos');
+      const info = await axios.get('https://laquiaquenadrugstoresbe.onrender.com/traerproductos');
       setProductos(info.data)
     } catch (error) {
       alert('No pudieron cargarse los productos; intentá nuevamente')
@@ -39,10 +43,19 @@ const AdminProductos = () => {
   }
   return 0 })
 
-  const [productosOrdenados, setProductosOrdenados] = useState([])
   useEffect(() => {
     setProductosOrdenados(aux)
   }, [aux])
+
+  useEffect(() => {
+    if(selectedCategory !== 'Todos'){
+      const productosFiltrados = productosOrdenados.filter(producto => producto.categoria === selectedCategory);
+      setProductosFiltrados(productosFiltrados)
+    } else {
+      setProductosFiltrados(productosOrdenados);
+    }
+  }, [productosOrdenados, selectedCategory])
+
 
   return (
     <>
@@ -54,10 +67,10 @@ const AdminProductos = () => {
     <div className="d-flex justify-content-center align-items-center">
      <ButtonAgregarProducto />
      </div>
-          <LinksCategoriasAdmin categoria={productosOrdenados}/>
+          <LinksCategoriasAdmin setSelectedCategory={setSelectedCategory}/>
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-wrap align-items-center justify-content-evenly">
-        {productosOrdenados.map((producto, index) => (
+        {productosFiltrados.map((producto, index) => (
           <CardProductoAdmin 
           producto={producto} index={index}
           />

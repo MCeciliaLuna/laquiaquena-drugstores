@@ -6,7 +6,7 @@ const CardsPedidosAdmin = () => {
   const traerUsuarios = async () => {
     try {
       const info = await axios.get(
-        "https://laquiaquenaherboristeriabe.onrender.com/traerpedidos"
+        "https://laquiaquenadrugstores.onrender.com/traerpedidos"
       );
       setPedidos(info.data);
     } catch (error) {

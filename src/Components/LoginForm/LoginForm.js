@@ -1,6 +1,5 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import ModalRegistro from "../ModalRegistro/ModalRegistro";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -18,13 +17,7 @@ const Login = () => {
       if (json.usuario.role === "ADMIN") {
         localStorage.setItem("access-token", json.token);
         localStorage.setItem("role", json.usuario.role);
-        localStorage.setItem("usuario", JSON.stringify(json.usuario));
         window.location.href = "/administrador";
-      } else if (json.usuario.role === "USER") {
-        localStorage.setItem("access-token", json.token);
-        localStorage.setItem("role", json.usuario.role);
-        localStorage.setItem("usuario", JSON.stringify(json.usuario));
-        window.location.href = "/home";
       }
     } catch (error) {
       alert("El usuario o la contraseña que ingresaste no es correcto");
@@ -72,7 +65,6 @@ const Login = () => {
           INGRESAR
         </button>
       </form>
-      <ModalRegistro />
     </div>
   </div>
   );

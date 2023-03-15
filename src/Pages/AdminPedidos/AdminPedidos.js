@@ -5,9 +5,7 @@ import ButtonAdminVolver from "../../Components/ButtonAdminVolver/ButtonAdminVol
 import "./AdminPedidos.css";
 
 const AdminPedidos = () => {
-  const localStorageRole = localStorage.getItem("role");
   if (
-    localStorageRole === "USER" ||
     !localStorage.getItem("role") ||
     !localStorage.getItem("access-token")
   ) {
