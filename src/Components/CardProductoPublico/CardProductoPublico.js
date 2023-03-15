@@ -1,39 +1,53 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import './CardProductoPublico.css'
 
-const CardProductoPublico = () => {
-  const [productos, setProductos] = useState([]);
-  const getProductos = async () => {
-    try {
-      const info = await axios.get("https://laquiaquenadrugstoresbe.onrender.com/traerproductos");
-      setProductos(info.data);
-    } catch (error) {
-      console.log(error);
+
+const CardProductoPublico = ({producto, setPedido, pedido}) => {
+  
+  
+  const pedidoArray = () => {
+    const productoPedido = { 
+      nombre: producto.nombre,
+      precio: producto.precio
+    }
+
+    if (window.confirm(`¿Segur@ que 𝗔𝗚𝗥𝗘𝗚𝗔𝗥 𝗔𝗟 𝗣𝗘𝗗𝗜𝗗𝗢 ${producto.nombre}? 🤔🌿`)) {
+      setPedido(prevPedido => {
+        const nuevoPedido = [...prevPedido, productoPedido];
+        localStorage.setItem("pedido", JSON.stringify(nuevoPedido));
+        return nuevoPedido;
+      });
     }
   };
-  useEffect(() => {
-    getProductos();
-  }, []);
+
   return (
-    <div className="div-productos-page d-flex flex-wrap justify-content-center">
-{ 
-   productos.map(producto => (
-  <div className="card-producto d-flex justify-content-center p-0 m-3 col-2 border-0 rounded-3" key={producto._id}>
-    <div className="card">
-      <img src={producto.image.secure_url} className="card-img-top" alt="..." />
-      <div className="card-body p-2">
-        <h4 className="card-title m-0 d-flex justify-content-center align-items-center fw-bold">{producto.nombre}</h4>
-        <p className="card-text py-2 m-0">{producto.categoria}</p>
-        <h5 className="card-text py-2 m-0 fw-bold">${producto.precio}</h5>
-        <a href={`https://api.whatsapp.com/send?phone=5493812183467&text=%C2%A1Hola%20*La%20Quiaque%C3%B1a%20Herborister%C3%ADa*%20%F0%9F%91%8B%F0%9F%8C%BF%20!%20Visit%C3%A9%20su%20p%C3%A1gina%20web%20y%20quisiera%20informaci%C3%B3n%20del%20producto%20*${producto.nombre}*.%20Muchas%20gracias!%20%E2%98%BA`} target="new" >
-        <button type="button" className="boton-productos-destacados btn text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Comprar</button></a>
-      </div>
-    </div>
-  </div>
-   ))}
-  
+    <>
+    <form className="card-producto d-flex justify-content-center align-items-around mx-2 mb-3 mt-3 rounded-3">
+    <div className="bg-light text-center card-productoventa h-auto p-2 rounded-3">
+    <img
+      src={producto.image.secure_url}
+      className="card-img-top"
+      alt="nombre"
+    />
+    <div className="card-body">
+      <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title">{producto.nombre}</h4>
+      <p className="text-muted text-categoria d-flex align-items-center justify-content-center"><i>{producto.categoria}</i></p>
+      <h5 className="text-precio bg-light p-1 m-0 rounded-0 border-0 fs-5 text-center">${producto.precio}</h5>
+      <div className="d-flex align-items-center justify-content-around">
+              <button
+              value={producto}
+              onClick={pedidoArray}
+                  id="producto"
+                  type='button'
+                  className="btn button-destacados-comprar text-light mt-3 align-items-end"
+                > 
+                  Comprar
+                </button>
+            </div>
+          </div>
         </div>
+        </form>
+        </>
   );
 };
 
