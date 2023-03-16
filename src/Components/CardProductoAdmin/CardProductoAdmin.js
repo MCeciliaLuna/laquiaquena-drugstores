@@ -1,69 +1,48 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import './CardProductoAdmin.css'
-import ModalEditar from "../ModalEditar/ModalEditar";
+import ModalEditar from "../ModalEditar/ModalEditar.js";
+import './CardProductoAdmin.css';
 
-const CardProductoVenta = ({productos = []}) => {
+const CardProductoAdmin = ({producto, index}) => {
 
     const eliminarProducto = async (_id) => {
+      if (window.confirm(`📣 ¿Estás segur@ que querés 𝗘𝗟𝗜𝗠𝗜𝗡𝗔𝗥 ${producto.nombre}? 😮`)) {
       await axios.delete(`https://laquiaquenadrugstoresbe.onrender.com/eliminarproducto/${_id}`)
-      alert('Producto eliminado exitosamente')
-      window.location.href = '/usuariologueado'
+      alert('Producto 𝗘𝗟𝗜𝗠𝗜𝗡𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 ✅😉')
+      window.location.reload()
     }
-
-    const aux = productos.sort((a,b) =>{
-    
-      if (a.nombre > b.nombre) {
-      return 1;
-    }
-    if (a.nombre < b.nombre) {
-      return -1;
-    }
-    return 0 })
-  
-    const [productosOrdenados, setProductosOrdenados] = useState([])
-  
-    useEffect(() => {
-      setProductosOrdenados(aux)
-    }, [aux])
+  }
 
   
   return (
-    <div className="d-flex flex-wrap align-items-center justify-content-center">
-            {
-              productosOrdenados.map((item)=>
-              <div className="card-producto d-flex justify-content-center p-0 m-3 col-2">
-              <div className="card text-center">
+    <>
+              <div className="card-producto d-flex justify-content-center align-items-around mx-2 mb-3 mt-3 rounded-3">
+              <div className="bg-light text-center card-productoventa h-auto p-2 rounded-3">
               <img
-                src={item.image.secure_url}
+                src={producto.image.secure_url}
                 className="card-img-top"
                 alt="nombre"
               />
-              <div className="card-body p-2">
-                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title fw-bold">{item.nombre}</h4>
-                <p className="cardventa-descripcion d-flex justify-content-center align-items-center card-text">{item.categoria}</p>
-                <h5 className="fw-bold">${item.precio}</h5>
-                  <div className="d-block">
+              <div className="card-body">
+                <h4 className="cardventa-titulo d-flex justify-content-center align-items-center card-title">{producto.nombre}</h4>
+                <p className="text-muted text-categoria d-flex align-items-center justify-content-center"><i>{producto.categoria}</i></p>
+                <h5 className="text-precio">$ {producto.precio}</h5>
+                <div className="d-flex align-items-center justify-content-around">
                   <button
                     type="button"
-                    id="botonEliminar"
-                    className="btn boton-logueado-eliminar text-light mx-1"
-                    onClick={(_id) => eliminarProducto(item._id)}
+                    className="btn boton-logueado-eliminar text-light"
+                    onClick={(_id) => eliminarProducto(producto._id)}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
 </svg>
                   </button>
+              <ModalEditar producto={producto} id={index} />
+                </div>
                 </div>
                 </div>
               </div>
-            </div>
-            )
-          }
-          <ModalEditar/>
-
-          </div>
+              </>
   );
 };
 
-export default CardProductoVenta;
+export default CardProductoAdmin;

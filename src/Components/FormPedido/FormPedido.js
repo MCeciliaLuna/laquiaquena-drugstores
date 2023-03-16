@@ -28,7 +28,7 @@ const FormPedido = () => {
 
   const enviarPedido = async (data) => {
     await axios
-      .post("https://laquiaquenaherboristeriabe.onrender.com/crearpedido", data)
+      .post("https://laquiaquenadrugstoresbe.onrender.com/crearpedido", data)
       .then((resp) => {
         setSendPedido(resp.data);
       });
@@ -163,10 +163,10 @@ const FormPedido = () => {
                   <label className="text-end me-2 text-light mt-0 p-0 w-75">
                       DRUGSTORE CERCANO:
                     </label>
-                  <select className="form-select" aria-label="Default select example" onChange={handleSelectChange}>
-  <option selected>DRUGSTORE 1</option>
-  <option>DRUGSTORE 2</option>
-  <option>DRUGSTORE 3</option>
+                  <select className="form-select" aria-label="Default select example" {...register("drugstore", { required: true })} >
+  <option value="Drugstore 1" selected>DRUGSTORE 1</option>
+  <option value="Drugstore 2">DRUGSTORE 2</option>
+  <option value="Drugstore 3">DRUGSTORE 3</option>
 </select>
                 </div>
                 </div>

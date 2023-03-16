@@ -53,7 +53,6 @@ const Productos = ({ setPedido, pedido }) => {
   return (
     <>
     <ButtonPedidos />
-    <div className="mt-4 pt-4">
       <Navbar />
     <LinksCategoriasAdmin setSelectedCategory={setSelectedCategory} />
     <div className="d-flex justify-content-center">
@@ -70,7 +69,6 @@ const Productos = ({ setPedido, pedido }) => {
         </div>
       </div>
   <Footer />
-  </div>
   </>
   );
 };
