@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from '../../Components/Carousel/Carousel';
-import Contacto from '../../Components/Contacto/Contacto';
 import LinksRedes from '../../Components/LinksRedes/LinksRedes';
 import ProductosDestacados from '../../Components/ProductosDestacados/ProductosDestacados';
 import Navbar from '../../Components/Navbar/Navbar';
@@ -16,7 +15,6 @@ const Home = () => {
       <Carousel />
       <LinksRedes />
       <ProductosDestacados />
-      <Contacto />
       <Footer />
     </>
   );

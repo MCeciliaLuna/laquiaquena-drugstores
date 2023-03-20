@@ -24,24 +24,23 @@ const ProductosDestacados = () => {
   return (
     <div className="productos-destacados">
       <div className="categorias d-flex justify-content-around align-items-center p-4">
-      <h2 className="title-productos-destacados fs-1 mb-0">PRODUCTOS DESTACADOS</h2>
+      <h1 className="title-productos-destacados mb-0">NUESTROS PRODUCTOS</h1>
 </div>
 
 <div className="card-group d-flex justify-content-evenly">
 { 
    productosFiltrados.map(producto => (
-  <div className="col-2 card-producto m-3 rounded-3" key={producto._id}>
-    <img src={producto.image.secure_url} className="card-img-top" alt={producto.nombre} />
+  <div className="card-producto m-1 rounded-3">
+    <img src={producto.image.secure_url} className="card-img-top fs-4" alt={producto.nombre} />
     <div className="card-body">
       <h4 className="card-title title-producto fw-bold d-flex justify-content-center align-items-center">{producto.nombre}</h4>
-      <p className="card-text py-2 m-0 ">{producto.categoria}</p>
-      <h5 className="card-text">${producto.precio}</h5>
+      <h5 className="card-text fs-4">${producto.precio}</h5>
     </div>
   </div>
    ))}
    <div className="pb-1 px-5 d-flex aling-items-center">
 <Link to="/productos" className="d-block">
-<button className="btn btn-verproductos m-4 p-3"><strong>Ver todos los productos</strong></button>
+<button className="btn btn-verproductos m-4 p-3"><strong>VER TODOS LOS PRODUCTOS</strong></button>
 </Link>
 </div>
 
