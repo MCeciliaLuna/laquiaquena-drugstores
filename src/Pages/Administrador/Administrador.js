@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
 import "./Administrador.css";
 
@@ -27,7 +26,6 @@ const Administrador = () => {
           </h2>
         </Link>
       </div>
-      <Footer />
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">

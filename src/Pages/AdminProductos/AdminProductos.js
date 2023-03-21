@@ -3,7 +3,6 @@ import axios from 'axios';
 import ButtonAgregarProducto from '../../Components/ButtonAgregarProducto/ButtonAgregarProducto';
 import CardProductoAdmin from '../../Components/CardProductoAdmin/CardProductoAdmin';
 import Navbar from '../../Components/Navbar/Navbar';
-import Footer from '../../Components/Footer/Footer';
 import LinksCategoriasAdmin from '../../Components/LinksCategoriasAdmin/LinksCategoriasAdmin';
 import './AdminProductos.css'
 import ButtonAdminVolverProductos from '../../Components/ButtonAdminVolverProductos/ButtonAdminVolverProductos';
@@ -77,7 +76,6 @@ const AdminProductos = () => {
         ))}
       </div>
       </div>
-      <Footer />
     </>
   );
 };

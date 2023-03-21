@@ -21,7 +21,7 @@ const CardProductoPublico = ({producto, setPedido, pedido}) => {
   };
 
   return (
-    <>
+   <>
     <form className="card-producto d-flex justify-content-center align-items-around mx-2 mb-3 mt-3 rounded-3">
     <div className="bg-light text-center card-productoventa h-auto p-2 rounded-3">
     <img

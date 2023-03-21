@@ -85,9 +85,12 @@ const ModalEditar = ({ producto, id }) => {
                   {...register("categoria", { required: true })}
                   required
                 >
-                  <option value="Aceites">Aceites</option>
-                  <option value="Cápsulas">Cápsulas</option>
-                  <option value="En sobre">En sobre</option>
+                  <option value="Almacén">Almacén</option>
+                  <option value="Artículos de limpieza">Artículos de limpieza</option>
+                  <option value="Bebidas">Bebidas</option>
+                  <option value="Higiene personal">Higiene personal</option>
+                  <option value="Repelentes">Repelentes</option>
+                  <option value="Otros">Otros</option>
                 </select>
                 <div className="d-flex mb-3">
                   <div className="d-flex align-items-center input-center">

@@ -30,7 +30,7 @@ const ProductosDestacados = () => {
 <div className="card-group d-flex justify-content-evenly">
 { 
    productosFiltrados.map(producto => (
-  <div className="card-producto m-1 rounded-3">
+  <div className="card-producto-destacado m-1 border rounded-3">
     <img src={producto.image.secure_url} className="card-img-top fs-4" alt={producto.nombre} />
     <div className="card-body">
       <h4 className="card-title title-producto fw-bold d-flex justify-content-center align-items-center">{producto.nombre}</h4>
@@ -38,14 +38,12 @@ const ProductosDestacados = () => {
     </div>
   </div>
    ))}
-   <div className="pb-1 px-5 d-flex aling-items-center">
-<Link to="/productos" className="d-block">
-<button className="btn btn-verproductos m-4 p-3"><strong>VER TODOS LOS PRODUCTOS</strong></button>
-</Link>
-</div>
 
 </div>
-    </div>
+<a href="/productos" className="d-block">
+<button className="btn btn-verproductos m-4 p-3"><strong>VER TODOS LOS PRODUCTOS</strong></button>
+</a>
+</div>
   );
 };
 

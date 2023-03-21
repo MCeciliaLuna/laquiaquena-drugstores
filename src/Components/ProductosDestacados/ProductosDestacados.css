@@ -2,8 +2,9 @@
   background-color: #faf9f9;
 }
 
-.card-producto{
-  width: 15% !important;
+.card-producto-destacado{
+  width: 15%;
+  box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
 }
 
 .title-productos-destacados{

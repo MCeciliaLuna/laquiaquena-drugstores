@@ -7,11 +7,13 @@ import axios from 'axios';
 import ButtonPedidos from '../../Components/ButtonPedidos/ButtonPedidos';
 import LinksCategoriasAdmin from '../../Components/LinksCategoriasAdmin/LinksCategoriasAdmin';
 
+
 const Productos = ({ setPedido, pedido }) => {
   const [productos, setProductos] = useState([]);
   const [productosOrdenados, setProductosOrdenados] = useState([])
   const [productosFiltrados, setProductosFiltrados] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(''); // nuevo estado para el término de búsqueda
   
   useEffect(() => {
     const getProductos = async () => {
@@ -41,19 +43,36 @@ const Productos = ({ setPedido, pedido }) => {
     setProductosOrdenados(aux)
   }, [aux])
 
-  useEffect(() => {
-    if(selectedCategory !== 'Todos'){
-      const productosFiltrados = productosOrdenados.filter(producto => producto.categoria === selectedCategory);
-      setProductosFiltrados(productosFiltrados)
-    } else {
-      setProductosFiltrados(productosOrdenados);
-    }
-  }, [productosOrdenados, selectedCategory])
+  
 
+  useEffect(() => {
+    let productosFiltrados = productosOrdenados;
+    
+    if(selectedCategory !== 'Todos'){
+      productosFiltrados = productosFiltrados.filter(producto => producto.categoria === selectedCategory);
+    }
+    
+    if (searchTerm.trim() !== '') {
+      productosFiltrados = productosFiltrados.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()));
+    }
+    
+    setProductosFiltrados(productosFiltrados);
+  }, [productosOrdenados, selectedCategory, searchTerm])
+
+  const handleSearchTermChange = event => {
+    setSearchTerm(event.target.value);
+  };
+  
   return (
     <>
     <ButtonPedidos />
       <Navbar />
+      <div className="m-3">
+      </div>
+      <div className="d-flex justify-content-center">
+    <input className="form-control w-25" type="text" name="buscador" placeholder="buscá tu producto" value={searchTerm} onChange={handleSearchTermChange} />
+    <button className="btn ms-2 text-light">Buscar</button>
+  </div>
     <LinksCategoriasAdmin setSelectedCategory={setSelectedCategory} />
     <div className="d-flex justify-content-center">
         <div className="d-flex flex-wrap align-items-center justify-content-evenly">
