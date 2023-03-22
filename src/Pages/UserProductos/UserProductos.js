@@ -13,7 +13,7 @@ const Productos = ({ setPedido, pedido }) => {
   const [productosOrdenados, setProductosOrdenados] = useState([])
   const [productosFiltrados, setProductosFiltrados] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState(''); // nuevo estado para el término de búsqueda
+  const [searchTerm, setSearchTerm] = useState('');
   
   useEffect(() => {
     const getProductos = async () => {
@@ -53,7 +53,7 @@ const Productos = ({ setPedido, pedido }) => {
     }
     
     if (searchTerm.trim() !== '') {
-      productosFiltrados = productosFiltrados.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()));
+      productosFiltrados = productosOrdenados.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()));
     }
     
     setProductosFiltrados(productosFiltrados);
@@ -67,9 +67,7 @@ const Productos = ({ setPedido, pedido }) => {
     <>
     <ButtonPedidos />
       <Navbar />
-      <div className="m-3">
-      </div>
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mt-3">
     <input className="form-control w-25" type="text" name="buscador" placeholder="buscá tu producto" value={searchTerm} onChange={handleSearchTermChange} />
     <button className="btn ms-2 text-light">Buscar</button>
   </div>

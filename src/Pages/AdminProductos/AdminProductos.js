@@ -12,6 +12,7 @@ const AdminProductos = () => {
   const [productosOrdenados, setProductosOrdenados] = useState([])
   const [productosFiltrados, setProductosFiltrados] = useState([])
   const [selectedCategory, setSelectedCategory] = useState('Todos');
+  const [searchTerm, setSearchTerm] = useState('');
 
   
   if (!localStorage.getItem("role") || !localStorage.getItem("access-token")) {
@@ -47,13 +48,22 @@ const AdminProductos = () => {
   }, [aux])
 
   useEffect(() => {
+    let productosFiltrados = productosOrdenados;
+    
     if(selectedCategory !== 'Todos'){
-      const productosFiltrados = productosOrdenados.filter(producto => producto.categoria === selectedCategory);
-      setProductosFiltrados(productosFiltrados)
-    } else {
-      setProductosFiltrados(productosOrdenados);
+      productosFiltrados = productosFiltrados.filter(producto => producto.categoria === selectedCategory);
     }
-  }, [productosOrdenados, selectedCategory])
+    
+    if (searchTerm.trim() !== '') {
+      productosFiltrados = productosOrdenados.filter(producto => producto.nombre.toLowerCase().includes(searchTerm.toLowerCase()));
+    }
+    
+    setProductosFiltrados(productosFiltrados);
+  }, [productosOrdenados, selectedCategory, searchTerm])
+
+  const handleSearchTermChange = event => {
+    setSearchTerm(event.target.value);
+  };
 
 
   return (
@@ -66,6 +76,10 @@ const AdminProductos = () => {
     <div className="d-flex justify-content-center align-items-center">
      <ButtonAgregarProducto />
      </div>
+    <div className="d-flex justify-content-center mt-3">
+    <input className="form-control w-25" type="text" name="buscador" placeholder="buscá tu producto" value={searchTerm} onChange={handleSearchTermChange} />
+    <button className="btn ms-2 text-light">Buscar</button>
+  </div>
           <LinksCategoriasAdmin setSelectedCategory={setSelectedCategory}/>
       <div className="d-flex justify-content-center">
         <div className="d-flex flex-wrap align-items-center justify-content-evenly">
