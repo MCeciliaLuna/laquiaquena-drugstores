@@ -6,8 +6,8 @@ import axios from "axios";
 
 const AdminDrugstore2 = () => {
   if (
-    !localStorage.getItem("role") ||
-    !localStorage.getItem("access-token")
+    !sessionStorage.getItem("role") ||
+    !sessionStorage.getItem("access-token")
   ) {
     alert("No tenés autorización para ingresar a esta página");
     window.location.href = "/";
@@ -28,7 +28,7 @@ const AdminDrugstore2 = () => {
   traerUsuarios()
   }, []);
 
-  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Drugstore 2')
+  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Lavalle 1901')
 
 
 

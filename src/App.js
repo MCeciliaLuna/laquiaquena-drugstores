@@ -25,9 +25,9 @@ function App() {
        <Route path="/login" element={<Login />} />
        
         <Route path="/administrador" element={<Administrador />} />
-         <Route path="/administrador/drugstore1" element={<AdminDrugstore1 />} />
-         <Route path="/administrador/drugstore2" element={<AdminDrugstore2 />} />
-         <Route path="/administrador/drugstore3" element={<AdminDrugstore3 />} />
+         <Route path="/administrador/MendozaCentral" element={<AdminDrugstore1 />} />
+         <Route path="/administrador/Lavalle" element={<AdminDrugstore2 />} />
+         <Route path="/administrador/Belgrano" element={<AdminDrugstore3 />} />
          <Route path="/administrador/productos" element={<AdminProductos />} />
 
         <Route path='*' element={<Error />} />

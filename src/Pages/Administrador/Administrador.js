@@ -4,8 +4,8 @@ import "./Administrador.css";
 
 const Administrador = () => {
   if (
-    !localStorage.getItem("role") ||
-    !localStorage.getItem("access-token")
+    !sessionStorage.getItem("role") ||
+    !sessionStorage.getItem("access-token")
   ) {
     alert("No tenés autorización para ingresar a esta página");
     window.location.href = "/";
@@ -35,19 +35,19 @@ const Administrador = () => {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body d-flex flex-column">
-      <a href="/administrador/drugstore1">
-          <h2 className="btn text-light fs-3">
-            DRUGSTORE 1 🌿
+      <a href="/administrador/MendozaCentral">
+          <h2 className="btn w-75 text-light fs-3">
+          Mendoza (Central) 🌿
           </h2>
         </a>
-        <a href="/administrador/drugstore2">
-          <h2 className="btn text-light fs-3">
-            DRUGSTORE 2 🌿
+        <a href="/administrador/Lavalle">
+          <h2 className="btn w-75 text-light fs-3">
+          Lavalle 🌿
           </h2>
         </a>
-        <a href="/administrador/drugstore3">
-          <h2 className="btn text-light fs-3">
-            DRUGSTORE 3 🌿
+        <a href="/administrador/Belgrano">
+          <h2 className="btn w-75 text-light fs-3">
+            Belgrano 🌿
           </h2>
         </a>
       </div>

@@ -7,8 +7,8 @@ import axios from "axios";
 
 const AdminDrugstore1 = () => {
   if (
-    !localStorage.getItem("role") ||
-    !localStorage.getItem("access-token")
+    !sessionStorage.getItem("role") ||
+    !sessionStorage.getItem("access-token")
   ) {
     alert("No tenés autorización para ingresar a esta página");
     window.location.href = "/";
@@ -29,7 +29,7 @@ const AdminDrugstore1 = () => {
   traerUsuarios()
   }, []);
 
-  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Drugstore 1')
+  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Mendoza 2498')
 
   return (
     <>

@@ -4,7 +4,7 @@ import './Login.css'
 
 
 const Login = () => {
-  localStorage.clear();
+  sessionStorage.clear();
   return (
     <div className="height-login">
       <LoginForm />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import './LoginForm.css'
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -15,8 +16,8 @@ const Login = () => {
     
     try {
       if (json.usuario.role === "ADMIN") {
-        localStorage.setItem("access-token", json.token);
-        localStorage.setItem("role", json.usuario.role);
+        sessionStorage.setItem("access-token", json.token);
+        sessionStorage.setItem("role", json.usuario.role);
         window.location.href = "/administrador";
       }
     } catch (error) {
@@ -64,6 +65,7 @@ const Login = () => {
         >
           INGRESAR
         </button>
+        <a href="/"><button class="btn btn-login text-light mt-2 fs-6">Volver</button></a>
       </form>
     </div>
   </div>
