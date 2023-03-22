@@ -24,16 +24,17 @@ const ProductosDestacados = () => {
   return (
     <div className="productos-destacados">
       <div className="categorias d-flex justify-content-around align-items-center p-4">
-      <h1 className="title-productos-destacados mb-0">NUESTROS PRODUCTOS</h1>
+      <h1 className="text-light mb-0">NUESTROS PRODUCTOS</h1>
 </div>
 
 <div className="card-group d-flex justify-content-evenly">
 { 
    productosFiltrados.map(producto => (
-  <div className="card-producto-destacado m-1 border rounded-3">
-    <img src={producto.image.secure_url} className="card-img-top fs-4" alt={producto.nombre} />
+  <div className="card-producto-destacado bg-light m-1 border rounded-3">
+    <img src={producto.image.secure_url} className="card-img-top fs-4 p-1" alt={producto.nombre} />
     <div className="card-body">
-      <h4 className="card-title title-producto fw-bold d-flex justify-content-center align-items-center">{producto.nombre}</h4>
+      <h4 className="card-title title-producto d-flex justify-content-center align-items-center">{producto.nombre}</h4>
+      <h6 className="card-text text-muted"><i>{producto.categoria}</i></h6>
       <h5 className="card-text fs-4">${producto.precio}</h5>
     </div>
   </div>

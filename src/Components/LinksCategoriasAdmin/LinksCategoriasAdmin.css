@@ -5,6 +5,15 @@
 .link-admin-categoria{
   width: 30%;
   font-size: 3vh;
+  cursor: pointer;
+}
+
+.link-admin-categoria:active {
+  color: #abcc01 !important;
+}
+
+.link-admin-categoria:focus {
+  background-color: #abcc01 !important;
 }
 
 .link-admin-categoria:hover{

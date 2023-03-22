@@ -5,6 +5,7 @@
 	right: 40px;
 	transition: all 300ms ease 0ms;
 	z-index: 99;
+	background-color: #abcc01;
 }
 .btn-flotante-pedidos:hover {
 	transform: translateY(-7px);

@@ -12,11 +12,9 @@ const Navbar = () => {
       window.location.href = "/login"
   }}
 
-  const isProductosPage = location.pathname === '/productos';
   const clickLogo = () => {
-    if (window.confirm("¿Segur@ que quieres volver al inicio?")) {
-      window.location.href = "/"
-  }}
+      sessionStorage.clear('pedido')
+  }
 
   return (
     <nav className="navbar navbar-expand-lg">
@@ -26,11 +24,12 @@ const Navbar = () => {
 </svg>
       )}
     <div className="container-fluid">
-    {isProductosPage && (
+      <Link to="/">
     <div className="logo-navbar-hover d-flex align-items-center" onClick={clickLogo}>
       <img src={imglogo} alt="logo" className="logo-navbar p-1" />
       <h4 className="navbar-brand text-light fs-3 m-0 ps-1">LA QUIAQUEÑA</h4>
-      </div>)}
+      </div>
+      </Link>
       <div className="d-flex justify-content-center" id="navbarSupportedContent">
             <p className="nombre-navbar text-light fs-5 ms-4 mb-0 pb-0">Bienvenido/a! 👋</p>
       </div>

@@ -14,7 +14,7 @@ const CardProductoPublico = ({producto, setPedido, pedido}) => {
     if (window.confirm(`¿Segur@ que 𝗔𝗚𝗥𝗘𝗚𝗔𝗥 𝗔𝗟 𝗣𝗘𝗗𝗜𝗗𝗢 ${producto.nombre}? 🤔🌿`)) {
       setPedido(prevPedido => {
         const nuevoPedido = [...prevPedido, productoPedido];
-        localStorage.setItem("pedido", JSON.stringify(nuevoPedido));
+        sessionStorage.setItem("pedido", JSON.stringify(nuevoPedido));
         return nuevoPedido;
       });
     }

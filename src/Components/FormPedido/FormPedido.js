@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 const FormPedido = () => {
-  const producto = JSON.parse(localStorage.getItem("pedido"));
+  const producto = JSON.parse(sessionStorage.getItem("pedido"));
 
   for (let i = 0; i < producto.length; i++) {
     if (producto[i].precio) {
@@ -36,6 +36,7 @@ const FormPedido = () => {
       "El pedido ha sido 𝗘𝗡𝗩𝗜𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 🤩💚. Si pagaste, informanos y 𝗲𝗻𝘃𝗶𝗮𝗻𝗼𝘀 𝗲𝗹 𝗰𝗼𝗺𝗽𝗿𝗼𝗯𝗮𝗻𝘁𝗲 vía 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 💵"
     );
     window.location.href = `https://api.whatsapp.com/send?phone=5493812183467&text=Hola,%20mi%20nombre%20es%20*${data.nombre}*%20y%20acabo%20de%20hacer%20un%20pedido%20desde%20la%20p%C3%A1gina%20web!%20%C2%BFPod%C3%A9s%20chequearlo?`;
+    sessionStorage.clear('pedido')
   };
 
   const pedidoString = JSON.stringify(producto).replace(
@@ -70,7 +71,7 @@ const FormPedido = () => {
 
   const resetearPedido = () => {
     if (window.confirm('¿Estás segur@ que querés borrar todo tu pedido?')) {
-      localStorage.clear()
+      sessionStorage.clear('pedido')
       window.location.href = "/productos"
     }
   }
@@ -164,9 +165,9 @@ const FormPedido = () => {
                       DRUGSTORE CERCANO:
                     </label>
                   <select className="form-select" aria-label="Default select example" {...register("drugstore", { required: true })} >
-  <option value="Drugstore 1" selected>DRUGSTORE 1</option>
-  <option value="Drugstore 2">DRUGSTORE 2</option>
-  <option value="Drugstore 3">DRUGSTORE 3</option>
+  <option value="Mendoza 2498" selected>Mendoza 2498</option>
+  <option value="Lavalle 1901">Lavalle 1901</option>
+  <option value="Belgrano 1991">Belgrano 1991</option>
 </select>
                 </div>
                 </div>

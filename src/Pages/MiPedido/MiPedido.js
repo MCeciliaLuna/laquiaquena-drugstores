@@ -7,7 +7,7 @@ import './MiPedido.css'
 import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
 
 const MiPedido = () => {
-  if (!localStorage.getItem("pedido")) {
+  if (!sessionStorage.getItem("pedido")) {
     alert("𝗡𝗢 seleccionaste 𝗻𝗶𝗻𝗴𝘂́𝗻 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝗼 todavía! 🤨");
     window.location.href = "/productos";
   }
