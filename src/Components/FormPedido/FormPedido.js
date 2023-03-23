@@ -3,6 +3,7 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./FormPedido.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import jsPDF from 'jspdf';
 
 const FormPedido = () => {
   const producto = JSON.parse(sessionStorage.getItem("pedido"));
@@ -26,11 +27,22 @@ const FormPedido = () => {
   const { register, handleSubmit } = useForm();
   const [sendPedido, setSendPedido] = useState();
 
+  const generarPDF = (data) => {
+  const pdf = new jsPDF();
+  pdf.text(20, 20, `Nombre: ${data.apellido} ${data.nombre}`);
+  pdf.text(20, 30, `Pedido: ${data.pedido}`);
+  pdf.text(20, 190, `Total: ${data.precio}`);
+  pdf.text(20, 200, `Drugstore: ${data.drugstore}`);
+  pdf.text(20, 220, `Pago: ${data.pago}`);
+  pdf.save('PEDIDO-QUIAQUEÑA.pdf');
+}
+
   const enviarPedido = async (data) => {
     await axios
       .post("https://laquiaquenadrugstoresbe.onrender.com/crearpedido", data)
       .then((resp) => {
         setSendPedido(resp.data);
+        generarPDF(data);
       });
     alert(
       "El pedido ha sido 𝗘𝗡𝗩𝗜𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 🤩💚. Si pagaste, informanos y 𝗲𝗻𝘃𝗶𝗮𝗻𝗼𝘀 𝗲𝗹 𝗰𝗼𝗺𝗽𝗿𝗼𝗯𝗮𝗻𝘁𝗲 vía 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 💵"
@@ -75,6 +87,7 @@ const FormPedido = () => {
       window.location.href = "/productos"
     }
   }
+
 
   return (
     <form onSubmit={handleSubmit(enviarPedido)}>
