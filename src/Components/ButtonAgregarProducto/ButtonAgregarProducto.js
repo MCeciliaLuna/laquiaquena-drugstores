@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import './ButtonAgregarProducto.css';
 
 const ButtonAgregarProducto = () => {
   const { register, handleSubmit } = useForm();
@@ -31,7 +32,7 @@ const ButtonAgregarProducto = () => {
       <div className="d-flex justify-content-center">
         <button
           type="button"
-          className="text-center rounded-circle btn text-light p-3"
+          className="text-center rounded-circle btn text-light p-3 btn-admin-agregarproducto"
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >

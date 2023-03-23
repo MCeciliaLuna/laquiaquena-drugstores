@@ -1,5 +1,5 @@
 import axios from "axios";
-import ModalEditar from "../ModalEditar/ModalEditar.js";
+import ModalEditar from "../ModalEditar/ModalEditar";
 import './CardProductoAdmin.css';
 
 const CardProductoAdmin = ({producto, index}) => {
@@ -15,7 +15,7 @@ const CardProductoAdmin = ({producto, index}) => {
   
   return (
     <>
-              <div className="card-producto d-flex justify-content-center align-items-around mx-2 mb-3 mt-3 rounded-3">
+              <div className="card-productoadmin d-flex justify-content-center align-items-around mx-2 mb-3 mt-3 rounded-3">
               <div className="bg-light text-center card-productoventa h-auto p-2 rounded-3">
               <img
                 src={producto.image.secure_url}
@@ -36,7 +36,7 @@ const CardProductoAdmin = ({producto, index}) => {
   <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
 </svg>
                   </button>
-              <ModalEditar producto={producto} id={index} />
+<ModalEditar producto={producto} id={index} />
                 </div>
                 </div>
                 </div>

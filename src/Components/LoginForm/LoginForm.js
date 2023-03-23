@@ -65,8 +65,8 @@ const Login = () => {
         >
           INGRESAR
         </button>
-        <a href="/"><button class="btn btn-login text-light mt-2 fs-6">Volver</button></a>
       </form>
+        <a href="/"><button class="btn btn-login text-light mt-2 fs-6">Volver</button></a>
     </div>
   </div>
   );

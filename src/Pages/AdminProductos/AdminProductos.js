@@ -5,7 +5,7 @@ import CardProductoAdmin from '../../Components/CardProductoAdmin/CardProductoAd
 import Navbar from '../../Components/Navbar/Navbar';
 import LinksCategoriasAdmin from '../../Components/LinksCategoriasAdmin/LinksCategoriasAdmin';
 import './AdminProductos.css'
-import ButtonAdminVolverProductos from '../../Components/ButtonAdminVolverProductos/ButtonAdminVolverProductos';
+import ButtonAdminVolver from '../../Components/ButtonAdminVolver/ButtonAdminVolver';
 
 const AdminProductos = () => {
   const [productos, setProductos] = useState([]);
@@ -70,7 +70,7 @@ const AdminProductos = () => {
     <>
     <Navbar />
     <div className="d-flex justify-content-evenly align-items-center">
-    <ButtonAdminVolverProductos />
+    <ButtonAdminVolver />
     <h1 className="text-light mb-0 pb-0">Productos</h1>
     </div>
     <div className="d-flex justify-content-center align-items-center">

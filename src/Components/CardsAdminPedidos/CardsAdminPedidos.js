@@ -53,7 +53,7 @@ const CardsPedidosAdmin = ({pedidosFiltrados}) => {
             </a>
           </div>
           <button
-            className="btn text-light d-block mx-5 mt-1 mb-3"
+            className="btn boton-entregadoenviado text-light d-block mx-5 mt-1 mb-3"
             onClick={(_id) => pedidoEnviado(pedido._id)}
           >
             Entregado/Enviado

@@ -19,9 +19,9 @@ const Administrador = () => {
     <>
       <Navbar />
       <div className=" page-administrador d-flex flex-column justify-content-center align-items-center">
-          <h2 className="buttons-movile btn mb-4 p-5 text-light" onClick={alertPedidos} data-bs-toggle="modal" data-bs-target="#exampleModal">PEDIDOS ✅</h2>
+          <h2 className="buttons-movile boton-entregadoenviado btn mb-4 p-5 text-light" onClick={alertPedidos} data-bs-toggle="modal" data-bs-target="#exampleModal">PEDIDOS ✅</h2>
         <Link to="/administrador/productos">
-          <h2 className="buttons-movile btn mb-4 p-5 text-light">
+          <h2 className="buttons-movile boton-entregadoenviado btn mb-4 p-5 text-light">
             PRODUCTOS 🌿
           </h2>
         </Link>
