@@ -1,6 +1,5 @@
 import React from 'react';
 import ButtonAdminVolver from '../../Components/ButtonAdminVolver/ButtonAdminVolver';
-import Footer from '../../Components/Footer/Footer';
 import Navbar from '../../Components/Navbar/Navbar';
 import FormPedido from '../../Components/FormPedido/FormPedido';
 import './MiPedido.css'
@@ -20,7 +19,6 @@ const MiPedido = () => {
     <h1 className="mb-0 text-light">Mi Pedido</h1>
     </div>
       <FormPedido />
-      <Footer />
     </>
   );
 };

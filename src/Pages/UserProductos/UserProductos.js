@@ -6,7 +6,7 @@ import CardProductoPublico from '../../Components/CardProductoPublico/CardProduc
 import axios from 'axios';
 import ButtonPedidos from '../../Components/ButtonPedidos/ButtonPedidos';
 import LinksCategoriasAdmin from '../../Components/LinksCategoriasAdmin/LinksCategoriasAdmin';
-import ButtonAdminVolver from '../../Components/ButtonAdminVolver/ButtonAdminVolver';
+import ButtonVolverHome from '../../Components/ButtonVolverHome/ButtonVolverHome';
 import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
 
 
@@ -71,7 +71,7 @@ const Productos = ({ setPedido, pedido }) => {
     <ButtonPedidos />
       <Navbar />
       <div className="d-flex justify-content-evenly align-items-center">
-    <ButtonAdminVolver />
+    <ButtonVolverHome />
     <h1 className="mb-0 text-light">Productos</h1>
     </div>
       <div className="d-flex justify-content-center mt-3">
