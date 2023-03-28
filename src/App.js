@@ -11,6 +11,7 @@ import AdminDrugstore2 from './Pages/AdminDrugstore2/AdminDrugstore2';
 import AdminDrugstore3 from './Pages/AdminDrugstore3/AdminDrugstore3';
 import AdminProductos from './Pages/AdminProductos/AdminProductos'
 import Administrador from './Pages/Administrador/Administrador';
+import PostPedido from './Pages/PostPedido/PostPedido';
 
 function App() {
   const [pedido, setPedido] = useState([])
@@ -21,6 +22,7 @@ function App() {
        <Route path="/" element={<Home />} />
         <Route path="/productos" element={<UserProductos setPedido={setPedido} pedido={pedido} />} />
         <Route path="/mipedido" element={<MiPedido setPedido={setPedido} pedido={pedido} />} />
+        <Route  path="/postpedido" element={<PostPedido />} />
  
        <Route path="/login" element={<Login />} />
        

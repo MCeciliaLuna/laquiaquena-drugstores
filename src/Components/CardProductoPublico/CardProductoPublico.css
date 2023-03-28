@@ -65,5 +65,9 @@
 }
 .card-producto{
   width: 275px !important;
+  height: auto;
+}
+.div-pedido{
+  width: 90% ;
 }
   }

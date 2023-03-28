@@ -47,7 +47,7 @@ const FormPedido = () => {
     alert(
       "El pedido ha sido 𝗘𝗡𝗩𝗜𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 🤩💚. Si pagaste, informanos y 𝗲𝗻𝘃𝗶𝗮𝗻𝗼𝘀 𝗲𝗹 𝗰𝗼𝗺𝗽𝗿𝗼𝗯𝗮𝗻𝘁𝗲 vía 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 💵"
     );
-    window.location.href = `https://api.whatsapp.com/send?phone=543816613960&text=%F0%9F%94%BAHola,%20mi%20nombre%20es%20*${data.apellido}%20${data.nombre}*%20y%20acabo%20de%20hacer%20un%20pedido%20en%20la%20web%20al%20drugstore%20de%20*${data.drugstore}*.%20%C2%BFPodr%C3%ADan%20Chequearlo?%20Gracias!%F0%9F%94%BB`;
+    window.location.href = "/postpedido"
     sessionStorage.clear('pedido')
   };
 
@@ -185,8 +185,8 @@ const FormPedido = () => {
                 </div>
                 </div>
                 </div>
-                <div className="d-flex justify-content-center">
-                <select className="form-select mt-3 w-50" aria-label="Default select example"  onChange={handleSelectChange}>
+                <div className="d-flex justify-content-center input-retiro">
+                <select className="form-select input-retiro mt-3 w-50" aria-label="Default select example"  onChange={handleSelectChange}>
   <option selected>RETIRO DEL LOCAL</option>
   <option value="ENVIO">ENVÍO</option>
 </select>
@@ -195,7 +195,7 @@ const FormPedido = () => {
               {showBlock && (
                 <div className="d-flex justify-content-center mt-5">
                   <input className="d-none" {...register("entrega")} value="ENVIO" />
-                  <div className="w-50">
+                  <div className="w-50 input-retiro">
                     <label className="text-end text-light me-2">
                       DIRECCIÓN:
                     </label>

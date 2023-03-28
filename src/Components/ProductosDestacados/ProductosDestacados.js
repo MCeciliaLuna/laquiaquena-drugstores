@@ -19,7 +19,7 @@ const ProductosDestacados = () => {
 
   const productosAleatorios = productos.sort(function() { return Math.random() - 0.5 })
 
-  const productosFiltrados = productosAleatorios.filter(producto => productos.length = 5)
+  const productosFiltrados = productosAleatorios.filter(producto => productos.length = 4)
 
   return (
     <div className="productos-destacados">
@@ -30,12 +30,12 @@ const ProductosDestacados = () => {
 <div className="card-group d-flex justify-content-evenly">
 { 
    productosFiltrados.map(producto => (
-  <div className="card-producto-destacado bg-light m-1 border rounded-3">
+  <div className="card-producto bg-light m-1 border rounded-3">
     <img src={producto.image.secure_url} className="card-img-top fs-4 p-1" alt={producto.nombre} />
     <div className="card-body">
-      <h4 className="card-title title-producto d-flex justify-content-center align-items-center">{producto.nombre}</h4>
+      <h3 className="card-title title-producto d-flex justify-content-center align-items-center">{producto.nombre}</h3>
       <h6 className="card-text text-muted"><i>{producto.categoria}</i></h6>
-      <h5 className="card-text fs-4">${producto.precio}</h5>
+      <p className="card-text fs-4">${producto.precio}</p>
     </div>
   </div>
    ))}

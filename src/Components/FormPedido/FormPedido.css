@@ -23,7 +23,9 @@
       font-size: 2vh;
     }
     .form-datospersonales{
-      display: table !important;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center !important;
       margin-left: 50px;
       margin-right: 50px;
     }
@@ -52,5 +54,11 @@
   }
   .select-pago{
     width: 60%;
+  }
+  .input-retiro{
+    width: 90% !important;
+  }
+  .div-pedido{
+    width: 90%;
   }
 }

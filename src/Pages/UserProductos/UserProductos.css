@@ -41,4 +41,7 @@
     .dropdown{
       display: flex !important;
     }
+    .buscador{
+      width: 50% !important;
+    }
   }

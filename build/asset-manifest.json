@@ -1,7 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.07bae579.css",
-    "main.js": "/static/js/main.604dd7d9.js",
+    "main.css": "/static/css/main.d8ca08a5.css",
+    "main.js": "/static/js/main.8d1e69e5.js",
+    "static/js/498.a1a45071.chunk.js": "/static/js/498.a1a45071.chunk.js",
+    "static/js/703.82c380af.chunk.js": "/static/js/703.82c380af.chunk.js",
+    "static/js/631.fb692d7f.chunk.js": "/static/js/631.fb692d7f.chunk.js",
     "static/js/787.8ff806f7.chunk.js": "/static/js/787.8ff806f7.chunk.js",
     "static/media/Signika-VariableFont_wght.ttf": "/static/media/Signika-VariableFont_wght.de83163a1ebe3e53dd9c.ttf",
     "static/media/whatsapp-png.png": "/static/media/whatsapp-png.d1038eb1bce26b4dab85.png",
@@ -9,17 +12,19 @@
     "static/media/cover1.png": "/static/media/cover1.4d15f812449078ca56bf.png",
     "static/media/cover2.png": "/static/media/cover2.621ee5c90e29d1598260.png",
     "static/media/cover3.png": "/static/media/cover3.8156392ed3e3fcb5a54e.png",
-    "static/media/WhatsApp Image 2022-10-31 at 13.48.07.jpeg": "/static/media/WhatsApp Image 2022-10-31 at 13.48.07.f3b9b342b97afaa754cd.jpeg",
     "static/media/Fenway Park JF Regular.ttf": "/static/media/Fenway Park JF Regular.4a8eea34aba6285bb6eb.ttf",
     "static/media/logo-carousel.png": "/static/media/logo-carousel.1f5941a4f5f9cb4669d3.png",
     "static/media/GillKayoCondensedPlain.otf": "/static/media/GillKayoCondensedPlain.77ba3089afd7611e95de.otf",
     "index.html": "/index.html",
-    "main.07bae579.css.map": "/static/css/main.07bae579.css.map",
-    "main.604dd7d9.js.map": "/static/js/main.604dd7d9.js.map",
+    "main.d8ca08a5.css.map": "/static/css/main.d8ca08a5.css.map",
+    "main.8d1e69e5.js.map": "/static/js/main.8d1e69e5.js.map",
+    "498.a1a45071.chunk.js.map": "/static/js/498.a1a45071.chunk.js.map",
+    "703.82c380af.chunk.js.map": "/static/js/703.82c380af.chunk.js.map",
+    "631.fb692d7f.chunk.js.map": "/static/js/631.fb692d7f.chunk.js.map",
     "787.8ff806f7.chunk.js.map": "/static/js/787.8ff806f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07bae579.css",
-    "static/js/main.604dd7d9.js"
+    "static/css/main.d8ca08a5.css",
+    "static/js/main.8d1e69e5.js"
   ]
 }
