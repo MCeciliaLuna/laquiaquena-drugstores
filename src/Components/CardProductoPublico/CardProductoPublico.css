@@ -38,13 +38,13 @@
     margin: 1px 0px !important;
    }
    .text-categoria{
-    font-size: 3vh;
+    font-size: 2.5vh;
    }
    .text-precio{
     font-size: 4vh;
    }
    .card-producto{
-    width: 200px !important;
+    width: 250px !important;
   }
 }
 

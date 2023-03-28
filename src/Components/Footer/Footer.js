@@ -36,7 +36,7 @@ const Footer = () => {
           </button>
         </Link>
       )}
-      <div className="d-flex justify-content-evenly align-items-center">
+      <div className="d-flex justify-content-evenly align-items-center pb-5">
       <h5 className="py-4 text-light mb-0">La Quiaqueña Drugstores | 2023</h5>
       <a href="https://mcecilialuna-dev.netlify.app/" target="_blank" rel='noreferrer' className="d-flex align-items-center text-light">
         <p className="m-0 p-0">Hecho por:</p>
