@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { Link, useLocation } from 'react-router-dom';
+import LogoDev from '../assets/images/logo-dev.ico'
 
 const Footer = () => {
   const location = useLocation();
@@ -35,7 +36,13 @@ const Footer = () => {
           </button>
         </Link>
       )}
-      <h5 className="py-4 text-light mb-0">Todos los derechos reservados a La Quiaqueña Drugstores | 2023</h5>
+      <div className="d-flex justify-content-evenly align-items-center">
+      <h5 className="py-4 text-light mb-0">La Quiaqueña Drugstores | 2023</h5>
+      <a href="https://mcecilialuna-dev.netlify.app/" target="_blank" rel='noreferrer' className="d-flex align-items-center text-light">
+        <p className="m-0 p-0">Hecho por:</p>
+        <img src={LogoDev} alt="logo" className="logo-img ms-2 py-2" />
+      </a>
+      </div>
     </div>
   );
 };

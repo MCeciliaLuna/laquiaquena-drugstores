@@ -3,6 +3,10 @@
   text-shadow: -5px 4px 9px rgba(0,0,0,0.81);
 }
 
+.logo-img{
+  height: 65px;
+}
+
 @media (min-width: 768px) and (max-width: 991.98px){
   .mapa{
     width: 33vh;
