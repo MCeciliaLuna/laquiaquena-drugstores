@@ -79,8 +79,9 @@ const ModalEditar = ({ producto, id }) => {
                   >
                      <option value="Almacén">Almacén</option>
                   <option value="Artículos de limpieza">Artículos de limpieza</option>
-                  <option value="Bebidas">Bebidas</option>
+                  <option value="Bico saborizados">Bico saborizados</option>
                   <option value="Higiene personal">Higiene personal</option>
+                  <option value="Hoja de coca">Hoja de coca</option>
                   <option value="Repelentes">Repelentes</option>
                   <option value="Otros">Otros</option>
                   </select>
