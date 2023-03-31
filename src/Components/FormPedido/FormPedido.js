@@ -222,8 +222,11 @@ const FormPedido = () => {
               <label className="text-center w-100 text-light mb-0 mt-3">
                 PAGO:
               </label>
+              <label className="text-center w-100 text-light mb-0">
+                ALIAS: laquiaquena
+              </label>
               <div className="d-flex justify-content-center align-items-center d-block mb-2">
-                <CopyToClipboard text="21938729084940013">
+                <CopyToClipboard text="0720069488000042792572">
                   <div className="d-flex align-items-center">
                     <button
                       className="m-1 btn text-light d-flex align-items-center"

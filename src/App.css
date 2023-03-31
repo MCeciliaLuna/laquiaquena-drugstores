@@ -55,3 +55,37 @@ box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
 .button-back{
   background-color: #abcc01;
 }
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #abcc01;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #abcc01;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #ffdd00;
+}
+::-webkit-scrollbar-track {
+  background: #fe0000;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #fe0000;
+}
+::-webkit-scrollbar-track:active {
+  background: #fe0000;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
