@@ -18,6 +18,10 @@
   width: 100%;
 }
 
+.boton-logueado-eliminar{
+  background-color: #fe0000 !important;
+}
+
 @media (max-width: 767.98px) {
   .cardventa-titulo{
     margin: 1px !important;

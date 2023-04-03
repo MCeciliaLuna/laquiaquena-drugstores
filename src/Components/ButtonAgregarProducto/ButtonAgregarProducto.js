@@ -1,32 +1,51 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import './ButtonAgregarProducto.css';
+import Swal from 'sweetalert2'
 
 const ButtonAgregarProducto = () => {
   const { register, handleSubmit } = useForm();
-  const onSubmit = async (data) => {
-    if (window.confirm("📣 ¿𝗔𝗚𝗥𝗘𝗚𝗔𝗠𝗢𝗦 este producto? 🤔")) {
-      const formData = new FormData();
 
-      for (const name in data) {
-        if (name === "image") {
-          formData.append(name, data[name][0]);
-        } else {
-          formData.append(name, data[name]);
+  const onSubmit = async (data) => {
+    Swal.fire({
+      color:'#161a1d',
+      text: '📣 ¿𝗔𝗚𝗥𝗘𝗚𝗔𝗠𝗢𝗦 este producto? 🤔',
+      showDenyButton: true,
+      denyButtonText:'NO',
+      confirmButtonText:'SÍ',
+      confirmButtonColor: '#fe0000',
+      denyButtonColor: '#abcc01',
+    }).then(response => {
+      if(response.isConfirmed){
+        const formData = new FormData();
+
+        for (const name in data) {
+          if (name === "image") {
+            formData.append(name, data[name][0]);
+          } else {
+            formData.append(name, data[name]);
+          }
         }
+
+        fetch(
+          "https://laquiaquenadrugstoresbe.onrender.com/crearproducto",
+          {
+            method: "POST",
+            body: formData,
+          }
+        ).then(() => {
+          Swal.fire({
+            title: 'El producto fue creado exitosamente! Espera un momento...',
+            showConfirmButton: false,
+          });
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        });
       }
-      const resp = await fetch(
-        "https://laquiaquenadrugstoresbe.onrender.com/crearproducto",
-        {
-          method: "POST",
-          body: formData,
-        }
-      );
-      const json = await resp.json();
-      alert("El producto FUE 𝗖𝗥𝗘𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 ✅😉");
-      window.location.reload();
-    }
-  };
+    });
+}
+  
   return (
     <div>
       <div className="d-flex justify-content-center">

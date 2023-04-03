@@ -1,16 +1,33 @@
 import axios from "axios";
 import ModalEditar from "../ModalEditar/ModalEditar";
 import './CardProductoAdmin.css';
+import Swal from 'sweetalert2'
 
 const CardProductoAdmin = ({producto, index}) => {
 
     const eliminarProducto = async (_id) => {
-      if (window.confirm(`📣 ¿Estás segur@ que querés 𝗘𝗟𝗜𝗠𝗜𝗡𝗔𝗥 ${producto.nombre}? 😮`)) {
-      await axios.delete(`https://laquiaquenadrugstoresbe.onrender.com/eliminarproducto/${_id}`)
-      alert('Producto 𝗘𝗟𝗜𝗠𝗜𝗡𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 ✅😉')
-      window.location.reload()
-    }
-  }
+      Swal.fire({
+        color:'#161a1d',
+        text: `¿Estás seguro que querés eliminar ${producto.nombre}?`,
+        showDenyButton: true,
+        denyButtonText:'NO',
+        confirmButtonText:'SÍ',
+        confirmButtonColor: '#fe0000',
+        denyButtonColor: '#abcc01',
+      }).then(resp => {
+        if(resp.isConfirmed){
+           axios.delete(`https://laquiaquenadrugstoresbe.onrender.com/eliminarproducto/${_id}`)
+          .then(() => {
+            Swal.fire({
+              color:'#161a1d',
+              title: 'Producto ELIMINADO EXITOSAMENTE ✅😉 Espera un momento...',
+              showConfirmButton: false,
+            });
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
+          })}});
+        }
 
   
   return (

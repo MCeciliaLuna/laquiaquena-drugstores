@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import "./ModalEditar.css";
 import { useState } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const ModalEditar = ({ producto, id }) => {
   const { register, handleSubmit } = useForm();
@@ -11,20 +12,38 @@ const ModalEditar = ({ producto, id }) => {
   const productoIdModalEdit = `producto${id}`;
 
   const editProducto = async (data) => {
-    if (
-      window.confirm(`📣 ¿𝗠𝗢𝗗𝗜𝗙𝗜𝗖𝗔𝗠𝗢𝗦 a ${producto.nombre}? 🤔`)
-    ) {
-      await axios.put("https://laquiaquenadrugstoresbe.onrender.com/modificarproducto", data);
-      setEditarProducto(data);
-      alert(`${producto.nombre} 𝗠𝗢𝗗𝗜𝗙𝗜𝗖𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 ✅😉`);
-      window.location.reload();
-    }
+    Swal.fire({
+      color:'#161a1d',
+      text: `📣 ¿MODIFICAMOS a ${producto.nombre}? 🤔`,
+      showDenyButton: true,
+      denyButtonText:'NO',
+      confirmButtonText:'SÍ',
+      confirmButtonColor: '#fe0000',
+      denyButtonColor: '#abcc01',
+    }).then(response => {
+      if(response.isConfirmed){
+        axios.put("https://laquiaquenadrugstoresbe.onrender.com/modificarproducto", data)
+          .then(() => {
+            setEditarProducto(data);
+            Swal.fire({
+              color:'#161a1d',
+              title: `${producto.nombre} fue modificado exitosamente! Espera un momento...`,
+              showConfirmButton: false,
+            });
+            setTimeout(() => {
+              Swal.close();
+              window.location.reload();
+            }, 1000);
+          })
+      }
+    });
   };
+  
 
   return (
     <div>
       <button
-        type="button" class="btn" data-bs-toggle="modal" data-bs-target={idProductoEdit}
+        type="button" class="btn boton-editar" data-bs-toggle="modal" data-bs-target={idProductoEdit}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
