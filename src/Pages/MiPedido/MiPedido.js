@@ -4,10 +4,17 @@ import Navbar from '../../Components/Navbar/Navbar';
 import FormPedido from '../../Components/FormPedido/FormPedido';
 import './MiPedido.css'
 import BotonWhatsapp from '../../Components/BotonWhatsapp/BotonWhatsapp';
+import Swal from 'sweetalert2';
 
 const MiPedido = () => {
   if (!sessionStorage.getItem("pedido")) {
-    alert("𝗡𝗢 seleccionaste 𝗻𝗶𝗻𝗴𝘂́𝗻 𝗽𝗿𝗼𝗱𝘂𝗰𝘁𝗼 todavía! 🤨");
+    Swal.fire({
+      color:'#161a1d',
+      title: 'No tenés ningún producto seleccionado todavía',
+      timer: 5000,
+      showConfirmButton: false
+    }
+    )
     window.location.href = "/productos";
   }
   return (

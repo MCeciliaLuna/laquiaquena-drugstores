@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import {Link, useLocation} from 'react-router-dom';
 import imglogo from '../assets/images/hoja.png'
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
 
@@ -9,10 +10,19 @@ const Navbar = () => {
   const isAuthorizedPage = location.pathname === '/' || location.pathname === '/productos' || location.pathname === '/mipedido';
 
   const clickLogo = () => {
-      if (window.confirm("¿Segur@ que quieres volver a la página inicial?")) {
-        window.location.href = "/"
-        sessionStorage.clear();
-    }}
+    Swal.fire({
+      color:'#161a1d',
+      title: '¿Querés volver al inicio?',
+      showDenyButton: true,
+      denyButtonText:'NO',
+      confirmButtonText:'SÍ',
+      confirmButtonColor: '#fe0000',
+      denyButtonColor: '#abcc01',
+    }).then(resp => {
+      if(resp.isConfirmed){
+        window.location.href ="/"
+        }}) 
+  }
 
   return (
     <nav className="navbar navbar-expand-lg">

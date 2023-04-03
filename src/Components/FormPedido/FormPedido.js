@@ -4,6 +4,7 @@ import "./FormPedido.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import jsPDF from 'jspdf';
+import Swal from 'sweetalert2'
 
 const FormPedido = () => {
   const producto = JSON.parse(sessionStorage.getItem("pedido"));
@@ -38,15 +39,19 @@ const FormPedido = () => {
 }
 
   const enviarPedido = async (data) => {
+    
     await axios
       .post("https://laquiaquenadrugstoresbe.onrender.com/crearpedido", data)
       .then((resp) => {
         setSendPedido(resp.data);
         generarPDF(data);
       });
-    alert(
-      "El pedido ha sido 𝗘𝗡𝗩𝗜𝗔𝗗𝗢 𝗘𝗫𝗜𝗧𝗢𝗦𝗔𝗠𝗘𝗡𝗧𝗘 🤩💚. Si pagaste, informanos y 𝗲𝗻𝘃𝗶𝗮𝗻𝗼𝘀 𝗲𝗹 𝗰𝗼𝗺𝗽𝗿𝗼𝗯𝗮𝗻𝘁𝗲 vía 𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 💵"
-    );
+      Swal.fire({
+        color:'#161a1d',
+        title: '¡Tu pedido ha sido enviado con éxito!',
+        showConfirmButton: false,
+        timer: 5000
+      })
     window.location.href = "/postpedido"
   };
 
@@ -81,16 +86,14 @@ const FormPedido = () => {
   };
 
   const resetearPedido = () => {
-    if (window.confirm('¿Estás segur@ que querés borrar todo tu pedido?')) {
       sessionStorage.clear('pedido')
       window.location.href = "/productos"
-    }
   }
 
 
   return (
     <form onSubmit={handleSubmit(enviarPedido)}>
-      <div className="m-3">
+      <div className="m-3 mb-5">
         <div className="height-pedidos">
           <div className="d-flex justify-content-center">
             <div className="w-100 mx-4 form-width">
@@ -280,7 +283,7 @@ const FormPedido = () => {
                 </select>
               </div>
               <div className="w-100 text-center mt-3">
-                <button type="submit" className="btn text-light">
+                <button type="submit" className="btn-enviar fs-4 btn text-light">
                   Enviar
                 </button>
               </div>

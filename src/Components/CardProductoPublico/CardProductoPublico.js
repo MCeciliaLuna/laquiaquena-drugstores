@@ -1,24 +1,32 @@
-import React from 'react';
 import './CardProductoPublico.css'
+import Swal from 'sweetalert2'
 
 
 const CardProductoPublico = ({producto, setPedido, pedido}) => {
-  
-  
+
   const pedidoArray = () => {
     const productoPedido = { 
       nombre: producto.nombre,
       precio: producto.precio
     }
 
-    if (window.confirm(`¿Segur@ que 𝗔𝗚𝗥𝗘𝗚𝗔𝗥 𝗔𝗟 𝗣𝗘𝗗𝗜𝗗𝗢 ${producto.nombre}? 🤔🌿`)) {
+  Swal.fire({
+    color:'#161a1d',
+    title: `${producto.nombre}`,
+    text: `¿Estás seguro que quieres añadir al carrito ${producto.nombre}?`,
+    showDenyButton: true,
+    denyButtonText:'NO',
+    confirmButtonText:'SÍ',
+    confirmButtonColor: '#fe0000',
+    denyButtonColor: '#abcc01',
+  }).then(resp => {
+    if(resp.isConfirmed){
       setPedido(prevPedido => {
         const nuevoPedido = [...prevPedido, productoPedido];
         sessionStorage.setItem("pedido", JSON.stringify(nuevoPedido));
         return nuevoPedido;
-      });
+      })}})
     }
-  };
 
   return (
    <>

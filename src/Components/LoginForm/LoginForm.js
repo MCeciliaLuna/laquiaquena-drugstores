@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import './LoginForm.css'
+import './LoginForm.css';
+import Swal from 'sweetalert2';
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -21,7 +22,12 @@ const Login = () => {
         window.location.href = "/administrador";
       }
     } catch (error) {
-      alert("El usuario o la contraseña que ingresaste no es correcto");
+      Swal.fire({
+        color:'#161a1d',
+        title: 'Contraseña o usuario incorrectas',
+        timer: 1000, 
+        showConfirmButton: false
+      })
     }
   };
 
