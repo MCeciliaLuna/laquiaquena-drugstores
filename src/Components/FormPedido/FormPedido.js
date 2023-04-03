@@ -46,12 +46,6 @@ const FormPedido = () => {
         setSendPedido(resp.data);
         generarPDF(data);
       });
-      Swal.fire({
-        color:'#161a1d',
-        title: '¡Tu pedido ha sido enviado con éxito!',
-        showConfirmButton: false,
-        timer: 5000
-      })
     window.location.href = "/postpedido"
   };
 

@@ -1,17 +1,27 @@
 import axios from "axios";
 import'./CardsAdminPedidos.css'
+import Swal from 'sweetalert2'
 
 const CardsPedidosAdmin = ({pedidosFiltrados}) => {
 
   const pedidoEnviado = async (_id) => {
-    if (window.confirm("📣 ¿Este pedido ha sido 𝗘𝗡𝗧𝗥𝗘𝗚𝗔𝗗𝗢/𝗘𝗡𝗩𝗜𝗔𝗗𝗢? 🤔")) {
-      await axios.delete(
-        `https://laquiaquenadrugstoresbe.onrender.com/eliminarpedido/${_id}`
-      );
-      alert("𝗧𝗨 𝗣𝗘𝗗𝗜𝗗𝗢 𝗙𝗨𝗘 𝗘𝗡𝗧𝗥𝗘𝗚𝗔𝗗𝗢/𝗘𝗡𝗩𝗜𝗔𝗗𝗢 𝗖𝗢𝗡 𝗘́𝗫𝗜𝗧𝗢 ✅😉");
-      window.location.reload();
-    }
-  };
+    Swal.fire({
+      color:'#161a1d',
+      text: '¿Este pedido ha sido entregado?',
+      showDenyButton: true,
+      denyButtonText:'NO',
+      confirmButtonText:'SÍ',
+      confirmButtonColor: '#fe0000',
+      denyButtonColor: '#abcc01',
+    }).then(resp => {
+      if(resp.isConfirmed){
+        axios.delete(
+          `https://laquiaquenadrugstoresbe.onrender.com/eliminarpedido/${_id}`
+        ).then(() => {
+          window.location.reload();
+      })
+      }})
+  }
 
   return (
     <div className="col d-flex justify-content-around flex-wrap mt-3">
