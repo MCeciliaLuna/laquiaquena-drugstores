@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const AdminDrugstore1 = () => {
+  const [pedidos, setPedidos] = useState([]);
   if (
     !sessionStorage.getItem("role") ||
     !sessionStorage.getItem("access-token")
@@ -14,7 +15,6 @@ const AdminDrugstore1 = () => {
     window.location.href = "/";
   }
 
-  const [pedidos, setPedidos] = useState([]);
   const traerUsuarios = async () => {
     try {
       const info = await axios.get(
@@ -26,10 +26,12 @@ const AdminDrugstore1 = () => {
     }
   };
   useEffect(() => {
-  traerUsuarios()
+    traerUsuarios();
   }, []);
 
-  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Mendoza 2498')
+  const pedidosFiltrados = pedidos.filter(
+    (drugstore) => drugstore.drugstore === "Mendoza 2498"
+  );
 
   return (
     <>
@@ -38,7 +40,7 @@ const AdminDrugstore1 = () => {
         <ButtonAdminVolver />
         <h1 className="text-light mb-0 pb-0">Pedidos</h1>
       </div>
-      <CardsAdminPedidos pedidosFiltrados={pedidosFiltrados}/>
+      <CardsAdminPedidos pedidosFiltrados={pedidosFiltrados} />
     </>
   );
 };

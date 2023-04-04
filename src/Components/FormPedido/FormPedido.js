@@ -3,10 +3,14 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 import "./FormPedido.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import jsPDF from 'jspdf';
-import Swal from 'sweetalert2'
+import jsPDF from "jspdf";
 
 const FormPedido = () => {
+  const [sendPedido, setSendPedido] = useState();
+  const [copied, setCopied] = useState(false);
+  const [showBlock, setShowBlock] = useState(false);
+  const { register, handleSubmit } = useForm();
+
   const producto = JSON.parse(sessionStorage.getItem("pedido"));
 
   for (let i = 0; i < producto.length; i++) {
@@ -25,28 +29,24 @@ const FormPedido = () => {
 
   const precios = producto.forEach((p) => (total += p.precio));
 
-  const { register, handleSubmit } = useForm();
-  const [sendPedido, setSendPedido] = useState();
-
   const generarPDF = (data) => {
-  const pdf = new jsPDF();
-  pdf.text(20, 20, `Nombre: ${data.apellido} ${data.nombre}`);
-  pdf.text(20, 30, `Pedido: ${data.pedido}`);
-  pdf.text(20, 190, `Total: ${data.precio}`);
-  pdf.text(20, 200, `Drugstore: ${data.drugstore}`);
-  pdf.text(20, 220, `Pago: ${data.pago}`);
-  pdf.save('PEDIDO-QUIAQUEÑA.pdf');
-}
+    const pdf = new jsPDF();
+    pdf.text(20, 20, `Nombre: ${data.apellido} ${data.nombre}`);
+    pdf.text(20, 30, `Pedido: ${data.pedido}`);
+    pdf.text(20, 190, `Total: ${data.precio}`);
+    pdf.text(20, 200, `Drugstore: ${data.drugstore}`);
+    pdf.text(20, 220, `Pago: ${data.pago}`);
+    pdf.save("PEDIDO-QUIAQUEÑA.pdf");
+  };
 
   const enviarPedido = async (data) => {
-    
     await axios
       .post("https://laquiaquenadrugstoresbe.onrender.com/crearpedido", data)
       .then((resp) => {
         setSendPedido(resp.data);
         generarPDF(data);
       });
-    window.location.href = "/postpedido"
+    window.location.href = "/postpedido";
   };
 
   const pedidoString = JSON.stringify(producto).replace(
@@ -61,13 +61,10 @@ const FormPedido = () => {
   const horaString = horaJs.toString();
   const hora = horaString.substr(4, 17);
 
-  const [copied, setCopied] = useState(false);
   const copiedCbu = (event) => {
     setCopied(true);
     event.preventDefault();
   };
-
-  const [showBlock, setShowBlock] = useState(false);
 
   const handleSelectChange = (event) => {
     const selectedValue = event.target.value;
@@ -80,10 +77,9 @@ const FormPedido = () => {
   };
 
   const resetearPedido = () => {
-      sessionStorage.clear('pedido')
-      window.location.href = "/productos"
-  }
-
+    sessionStorage.clear("pedido");
+    window.location.href = "/productos";
+  };
 
   return (
     <form onSubmit={handleSubmit(enviarPedido)}>
@@ -113,9 +109,14 @@ const FormPedido = () => {
                   </div>
                 </div>
               </div>
-                  <div className="w-100 d-flex justify-content-center align-items-center">
-                  <button className="btn mt-4 mb-2 text-light" onClick={resetearPedido}>Borrar todo</button>
-                  </div>
+              <div className="w-100 d-flex justify-content-center align-items-center">
+                <button
+                  className="btn mt-4 mb-2 text-light"
+                  onClick={resetearPedido}
+                >
+                  Borrar todo
+                </button>
+              </div>
               <hr className="text-light" />
 
               <input
@@ -170,27 +171,41 @@ const FormPedido = () => {
                     />
                   </div>
                   <div className="d-flex align-items-center mt-1">
-                  <label className="text-end me-2 text-light mt-0 p-0 w-75">
+                    <label className="text-end me-2 text-light mt-0 p-0 w-75">
                       DRUGSTORE CERCANO:
                     </label>
-                  <select className="form-select" aria-label="Default select example" {...register("drugstore", { required: true })} >
-  <option value="Mendoza 2498" selected>Mendoza 2498</option>
-  <option value="Lavalle 1901">Lavalle 1901</option>
-  <option value="Belgrano 1991">Belgrano 1991</option>
-</select>
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                      {...register("drugstore", { required: true })}
+                    >
+                      <option value="Mendoza 2498" selected>
+                        Mendoza 2498
+                      </option>
+                      <option value="Lavalle 1901">Lavalle 1901</option>
+                      <option value="Belgrano 1991">Belgrano 1991</option>
+                    </select>
+                  </div>
                 </div>
-                </div>
-                </div>
-                <div className="d-flex justify-content-center input-retiro">
-                <select className="form-select input-retiro mt-3 w-50" aria-label="Default select example"  onChange={handleSelectChange}>
-  <option selected>RETIRO DEL LOCAL</option>
-  <option value="ENVIO">ENVÍO</option>
-</select>
-</div>
+              </div>
+              <div className="d-flex justify-content-center input-retiro">
+                <select
+                  className="form-select input-retiro mt-3 w-50"
+                  aria-label="Default select example"
+                  onChange={handleSelectChange}
+                >
+                  <option selected>RETIRO DEL LOCAL</option>
+                  <option value="ENVIO">ENVÍO</option>
+                </select>
+              </div>
 
               {showBlock && (
                 <div className="d-flex justify-content-center mt-5">
-                  <input className="d-none" {...register("entrega")} value="ENVIO" />
+                  <input
+                    className="d-none"
+                    {...register("entrega")}
+                    value="ENVIO"
+                  />
                   <div className="w-50 input-retiro">
                     <label className="text-end text-light me-2">
                       DIRECCIÓN:
@@ -264,7 +279,8 @@ const FormPedido = () => {
               </div>
               <div className="d-flex justify-content-center">
                 <select
-                  class="form-select select-pago" aria-label="Default select example"
+                  class="form-select select-pago"
+                  aria-label="Default select example"
                   {...register("pago", { required: true })}
                   required
                 >
@@ -277,7 +293,10 @@ const FormPedido = () => {
                 </select>
               </div>
               <div className="w-100 text-center mt-3">
-                <button type="submit" className="btn-enviar fs-4 btn text-light">
+                <button
+                  type="submit"
+                  className="btn-enviar fs-4 btn text-light"
+                >
                   Enviar
                 </button>
               </div>

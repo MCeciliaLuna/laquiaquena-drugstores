@@ -1,15 +1,16 @@
-.fondo-modal-editar, .boton-editar{
+.fondo-modal-editar,
+.boton-editar {
   background-color: #7fab1f;
 }
 
-@media (max-width: 767.98px){
-  .text-input-editar{
+@media (max-width: 767.98px) {
+  .text-input-editar {
     font-size: 2.5vh;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
-.text-input-editar{
-  font-size: 2.5vh;
-}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .text-input-editar {
+    font-size: 2.5vh;
+  }
 }

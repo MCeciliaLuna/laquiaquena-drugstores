@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const AdminDrugstore2 = () => {
+  const [pedidos, setPedidos] = useState([]);
   if (
     !sessionStorage.getItem("role") ||
     !sessionStorage.getItem("access-token")
@@ -13,7 +14,6 @@ const AdminDrugstore2 = () => {
     window.location.href = "/";
   }
 
-  const [pedidos, setPedidos] = useState([]);
   const traerUsuarios = async () => {
     try {
       const info = await axios.get(
@@ -25,12 +25,12 @@ const AdminDrugstore2 = () => {
     }
   };
   useEffect(() => {
-  traerUsuarios()
+    traerUsuarios();
   }, []);
 
-  const pedidosFiltrados = pedidos.filter(drugstore => drugstore.drugstore === 'Lavalle 1901')
-
-
+  const pedidosFiltrados = pedidos.filter(
+    (drugstore) => drugstore.drugstore === "Lavalle 1901"
+  );
 
   return (
     <>

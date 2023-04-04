@@ -1,76 +1,75 @@
-.height-login{
+.height-login {
   height: 100vh;
 }
 
-.bg-modal{
+.bg-modal {
   background-color: #b00215;
 }
 
-.button-registro{
+.button-registro {
   background-color: #f89d13;
 }
 
-.btn-volver-modal{
+.btn-volver-modal {
   background-color: #b00215 !important;
 }
 
-.btn-crear-modal{
+.btn-crear-modal {
   background-color: #f89d13 !important;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
-  .height-login{
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .height-login {
     height: 95vh;
   }
-  .input-login{
+  .input-login {
     padding: 10px;
     font-size: 2vh;
   }
-  .text-title{
+  .text-title {
     font-size: 2.5vh;
   }
-  .text-title-principal{
+  .text-title-principal {
     font-size: 4vh;
   }
-  .boton-login{
+  .boton-login {
     font-size: 2vh;
   }
-  .input-registro{
+  .input-registro {
     padding: 10px;
     font-size: 2vh;
   }
-  .boton-modal-registro{
+  .boton-modal-registro {
     padding: 10px;
     font-size: 2vh;
   }
+}
+
+@media (max-width: 767.98px) {
+  .height-login {
+    height: 95vh;
   }
-  
-  
-  @media (max-width: 767.98px) {
-    .height-login{
-      height: 95vh;
-    }
-    .input-login{
-      width: 88% !important;
-      padding: 10px;
-      font-size: 3vh;
-    }
-    .text-title{
-      font-size: 3vh;
-    }
-    .text-title-principal{
-      font-size: 5vh;
-    }
-    .boton-login{
-      font-size: 3vh;
-      padding: 10px !important;
-    }
-    .input-registro{
-      padding: 10px;
-      font-size: 2.5vh;
-    }
-    .boton-modal-registro{
-      padding: 10px;
-      font-size: 2.5vh;
-    }
+  .input-login {
+    width: 88% !important;
+    padding: 10px;
+    font-size: 3vh;
   }
+  .text-title {
+    font-size: 3vh;
+  }
+  .text-title-principal {
+    font-size: 5vh;
+  }
+  .boton-login {
+    font-size: 3vh;
+    padding: 10px !important;
+  }
+  .input-registro {
+    padding: 10px;
+    font-size: 2.5vh;
+  }
+  .boton-modal-registro {
+    padding: 10px;
+    font-size: 2.5vh;
+  }
+}

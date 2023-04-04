@@ -1,34 +1,34 @@
-.carousel-height{
+.carousel-height {
   height: 95vh;
 }
 
-.logo-carousel{
+.logo-carousel {
   position: absolute;
   z-index: 1;
   top: 27%;
   left: 0.01vh;
 }
 
-@media (min-width: 768px) and (max-width: 991.98px){
-  .carousel-height{
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .carousel-height {
     height: 75vh;
   }
-  .logo-carousel{
-   top: 29%;
+  .logo-carousel {
+    top: 29%;
   }
-  .hojas-carousel{
+  .hojas-carousel {
     width: 85% !important;
   }
 }
 
 @media (max-width: 767.98px) {
-  .carousel-height{
-   height: 84vh;
+  .carousel-height {
+    height: 84vh;
   }
-  .logo-carousel{
-    top: 30%;
-   }
-   .hojas-carousel{
-     width: 95% !important;
-   }
+  .logo-carousel {
+    top: 40%;
+  }
+  .hojas-carousel {
+    width: 95% !important;
+  }
 }

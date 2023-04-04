@@ -1,14 +1,12 @@
-import React from "react";
 import LoginForm from "../../Components/LoginForm/LoginForm";
-import './Login.css'
-
+import "./Login.css";
 
 const Login = () => {
   sessionStorage.clear();
   return (
     <div className="height-login">
       <LoginForm />
-      </div>
+    </div>
   );
 };
 

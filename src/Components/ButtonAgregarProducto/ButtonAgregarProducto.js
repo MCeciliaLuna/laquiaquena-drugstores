@@ -1,22 +1,22 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import './ButtonAgregarProducto.css';
-import Swal from 'sweetalert2'
+import "./ButtonAgregarProducto.css";
+import Swal from "sweetalert2";
 
 const ButtonAgregarProducto = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (data) => {
     Swal.fire({
-      color:'#161a1d',
-      text: '📣 ¿𝗔𝗚𝗥𝗘𝗚𝗔𝗠𝗢𝗦 este producto? 🤔',
+      color: "#161a1d",
+      text: "📣 ¿𝗔𝗚𝗥𝗘𝗚𝗔𝗠𝗢𝗦 este producto? 🤔",
       showDenyButton: true,
-      denyButtonText:'NO',
-      confirmButtonText:'SÍ',
-      confirmButtonColor: '#fe0000',
-      denyButtonColor: '#abcc01',
-    }).then(response => {
-      if(response.isConfirmed){
+      denyButtonText: "NO",
+      confirmButtonText: "SÍ",
+      confirmButtonColor: "#fe0000",
+      denyButtonColor: "#abcc01",
+    }).then((response) => {
+      if (response.isConfirmed) {
         const formData = new FormData();
 
         for (const name in data) {
@@ -27,15 +27,12 @@ const ButtonAgregarProducto = () => {
           }
         }
 
-        fetch(
-          "https://laquiaquenadrugstoresbe.onrender.com/crearproducto",
-          {
-            method: "POST",
-            body: formData,
-          }
-        ).then(() => {
+        fetch("https://laquiaquenadrugstoresbe.onrender.com/crearproducto", {
+          method: "POST",
+          body: formData,
+        }).then(() => {
           Swal.fire({
-            title: 'El producto fue creado exitosamente! Espera un momento...',
+            title: "El producto fue creado exitosamente! Espera un momento...",
             showConfirmButton: false,
           });
           setTimeout(() => {
@@ -44,8 +41,8 @@ const ButtonAgregarProducto = () => {
         });
       }
     });
-}
-  
+  };
+
   return (
     <div>
       <div className="d-flex justify-content-center">
@@ -114,18 +111,19 @@ const ButtonAgregarProducto = () => {
                     {...register("categoria", { required: true })}
                     required
                   >
-                     <option value="Almacén">Almacén</option>
-                  <option value="Artículos de limpieza">Artículos de limpieza</option>
-                  <option value="Bebidas">Bebidas</option>
-                  <option value="Bico saborizados">Bico saborizados</option>
-                  <option value="Higiene personal">Higiene personal</option>
-                  <option value="Hoja de coca">Hoja de coca</option>
-                  <option value="Repelentes">Repelentes</option>
-                  <option value="Otros">Otros</option>
+                    <option value="Almacén">Almacén</option>
+                    <option value="Artículos de limpieza">
+                      Artículos de limpieza
+                    </option>
+                    <option value="Bebidas">Bebidas</option>
+                    <option value="Bico saborizados">Bico saborizados</option>
+                    <option value="Higiene personal">Higiene personal</option>
+                    <option value="Hoja de coca">Hoja de coca</option>
+                    <option value="Repelentes">Repelentes</option>
+                    <option value="Otros">Otros</option>
                   </select>
                 </div>
-                <div className="mb-3">
-                </div>
+                <div className="mb-3"></div>
                 <div className="mb-3 text-center">
                   <div className="d-flex">
                     <div className="d-flex align-items-center input-center">

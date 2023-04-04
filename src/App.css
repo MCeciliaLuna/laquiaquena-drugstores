@@ -13,8 +13,10 @@
   src: url(./assets/fonts/Fenway\ Park\ JF\ Regular.ttf);
 }
 
-h1,h2,h3{
-  font-family: Title ;
+h1,
+h2,
+h3 {
+  font-family: Title;
 }
 
 body {
@@ -26,33 +28,36 @@ body {
   background-position: center;
 }
 
-input, textarea, .btn, .mapa{
-box-shadow: -2px 2px 4px 0px rgba(0,0,0,0.75);
+input,
+textarea,
+.btn,
+.mapa {
+  box-shadow: -2px 2px 4px 0px rgba(0, 0, 0, 0.75);
 }
 
-.btn{
-  text-shadow: -3px 2px 7px rgba(0,0,0,0.81);
-  background-color: #FE0000;
+.btn {
+  text-shadow: -3px 2px 7px rgba(0, 0, 0, 0.81);
+  background-color: #fe0000;
 }
 
-.card-producto{
-  box-shadow: -2px 1px 9px 0px rgba(0,0,0,0.75);
+.card-producto {
+  box-shadow: -2px 1px 9px 0px rgba(0, 0, 0, 0.75);
 }
 
-.card-producto:hover{
-  transition: all .2s;
+.card-producto:hover {
+  transition: all 0.2s;
   transform: scale(1.03);
   color: black;
 }
 
-.btn:hover{
-    transition: all .2s;
-    transform: scale(1.05);
-    background-color: #FFDD00 !important;
-    color: white;
+.btn:hover {
+  transition: all 0.2s;
+  transform: scale(1.05);
+  background-color: #ffdd00 !important;
+  color: white;
 }
 
-.button-back{
+.button-back {
   background-color: #abcc01;
 }
 
