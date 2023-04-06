@@ -26,6 +26,17 @@ Si queremos correrlo en el puerto local 3000,
 ```bash
   npm start
 ```
+
+## Paquetes 🚀
+Los paquetes que utilizamos para esta página son
+[React](https://react.dev/)
+• [React Router Dom](https://reactrouter.com/)
+• [React Hook Form](https://react-hook-form.com/)
+• [Axios](https://axios-http.com/docs/intro)
+• [SweetAlert2](https://sweetalert2.github.io/)
+• [Js Pdf](https://www.npmjs.com/package/jspdf)
+• [React Copy To Clipboard](https://www.npmjs.com/package/react-copy-to-clipboard)
+
     
 ## Deploy 🌐
 
